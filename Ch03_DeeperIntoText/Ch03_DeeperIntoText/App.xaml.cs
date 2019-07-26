@@ -11,7 +11,9 @@ namespace Ch03_DeeperIntoText
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
+            MainPage = new WelcomePage();
+            MainPage.BackgroundColor = Color.Default;
         }
 
         protected override void OnStart()
