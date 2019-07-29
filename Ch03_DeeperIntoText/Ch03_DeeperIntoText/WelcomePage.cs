@@ -34,8 +34,30 @@ namespace Ch03_DeeperIntoText
                     new Label
                     {
                         Text = "Text",
-                        FormattedText = FString()
+                        FormattedText = FString(),
                         //Can't use Text and FormattedText at the sometime.
+                        FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                    },
+                    new Label
+                    {
+                        FormattedText = new FormattedString
+                        {
+                            Spans =
+                            {
+                                new Span
+                                {
+                                    Text = "What the..."
+                                },
+                                new Span
+                                {
+                                    Text = "Hell is going on here?",
+                                    FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                                    FontAttributes = FontAttributes.Bold
+                                }
+                            }
+                        },
+
+                        HorizontalOptions = LayoutOptions.Center
                     }
                 }
         };
@@ -52,8 +74,8 @@ namespace Ch03_DeeperIntoText
             fString.Spans.Add(new Span
             {
                 Text = "Love ",
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-                FontAttributes = FontAttributes.Bold
+                FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
+                FontAttributes = FontAttributes.Bold | FontAttributes.Italic
             });
 
             fString.Spans.Add(new Span
