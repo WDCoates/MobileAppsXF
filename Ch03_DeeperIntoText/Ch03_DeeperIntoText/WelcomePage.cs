@@ -58,6 +58,11 @@ namespace Ch03_DeeperIntoText
                         },
 
                         HorizontalOptions = LayoutOptions.Center
+                    },
+                    new Label
+                    {
+                        FormattedText = NLoop()
+                     
                     }
                 }
         };
@@ -83,6 +88,33 @@ namespace Ch03_DeeperIntoText
                 Text = "Xamarin.Forms..."
             });
 
+
+            return fString;
+        }
+
+        static FormattedString NLoop()
+        {
+            FormattedString fString = new FormattedString();
+            NamedSize[] nSizes =
+                {NamedSize.Default, NamedSize.Large, NamedSize.Medium, NamedSize.Micro, NamedSize.Small};
+
+            foreach (var n in nSizes)
+            {
+                double fontSize = Device.GetNamedSize(n, typeof(Label));
+                fString.Spans.Add(new Span
+                {
+                    Text = $"namedSize = {n} ({fontSize:F2})",
+                    FontSize = fontSize
+                });
+
+                if (n != nSizes.Last())
+                {
+                    fString.Spans.Add(new Span
+                    {
+                        Text = Environment.NewLine + Environment.NewLine
+                    });
+                }
+            }
 
             return fString;
         }
