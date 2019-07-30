@@ -96,7 +96,7 @@ namespace Ch03_DeeperIntoText
         {
             FormattedString fString = new FormattedString();
             NamedSize[] nSizes =
-                {NamedSize.Default, NamedSize.Large, NamedSize.Medium, NamedSize.Micro, NamedSize.Small};
+                {NamedSize.Default, NamedSize.Micro, NamedSize.Small, NamedSize.Medium, NamedSize.Large};
 
             foreach (var n in nSizes)
             {
