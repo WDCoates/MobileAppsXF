@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Reflection;
 
 using Xamarin.Forms;
@@ -20,14 +17,14 @@ namespace Ch04_ScrollingTheStack
 
             };
 
-			var sLayout = new StackLayout {
-            };
+			var sLayout = new StackLayout();
 
             foreach (var info in typeof(Color).GetRuntimeFields())
             {
-                Console.WriteLine(info);
                 if (info.GetCustomAttribute<ObsoleteAttribute>() != null)
+                {
                     continue;   //Next
+                }
 
                 if (info.IsPublic && info.IsStatic && info.FieldType == typeof(Color))
                 {
@@ -36,7 +33,18 @@ namespace Ch04_ScrollingTheStack
 
             }
 
-            
+            foreach (var info in typeof(Color).GetRuntimeProperties())
+            {
+                var mInfo = info.GetMethod;
+
+                if (mInfo.IsPublic && mInfo.IsStatic && mInfo.ReturnType == typeof(Color))
+                {
+                    sLayout.Children.Add(
+                        CreateColorLabel((Color)info.GetValue(null), info.Name));
+                }
+            }
+
+
             tStack.Children.Add(new ScrollView {Content = sLayout});
 
             Content = tStack;
