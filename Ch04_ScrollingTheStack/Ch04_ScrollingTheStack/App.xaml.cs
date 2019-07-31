@@ -11,9 +11,9 @@ namespace Ch04_ScrollingTheStack
         {
             InitializeComponent();
 
-            MainPage = new MainPage
+            MainPage = new ReflectedColoursPage
             {
-                Padding = new Thickness(10, TTop(), right: 10, bottom: 5)
+                Padding = new Thickness(10, TTop(), right: 30, bottom: 5)
             };
         }
 
