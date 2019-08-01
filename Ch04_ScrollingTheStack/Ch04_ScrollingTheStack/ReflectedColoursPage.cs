@@ -14,10 +14,17 @@ namespace Ch04_ScrollingTheStack
                 Children = {
                     new Label { Text = "Welcome to the Reflected Colours Page", HorizontalOptions = LayoutOptions.Center }
                 },
-
+                BackgroundColor = Color.LightBlue
             };
 
-			var sLayout = new StackLayout();
+			var sLayout = new StackLayout
+            {
+                BackgroundColor = Color.Green,
+                Margin = new Thickness(5),
+                HorizontalOptions = LayoutOptions.Start,
+                Orientation = StackOrientation.Horizontal
+
+            };
 
             foreach (var info in typeof(Color).GetRuntimeFields())
             {
@@ -45,7 +52,75 @@ namespace Ch04_ScrollingTheStack
             }
 
 
-            tStack.Children.Add(new ScrollView {Content = sLayout});
+            tStack.Children.Add(new ScrollView {Content = sLayout, 
+                BackgroundColor = Color.Yellow, Margin = new Thickness(5)
+                , Orientation = ScrollOrientation.Horizontal
+            });
+
+            tStack.Children.Add(new ScrollView
+            {
+                Content = new Label { Text = "This hasn't a hope in hell!" + Environment.NewLine +
+                                             "aas" + Environment.NewLine +
+                                             "asas" + Environment.NewLine +
+                                             "asasasasas" + Environment.NewLine +
+                                             "asasasasa" + Environment.NewLine +
+                                             "asasasssssssssssssssss" + Environment.NewLine +
+                                             "asasas" + Environment.NewLine +
+                                             "asasas" + Environment.NewLine +
+                                             "assssssssssssssssssssssssss" + Environment.NewLine +
+                                             "asasasa" + Environment.NewLine +
+                                             "asasas" + Environment.NewLine +
+                                             "as" + Environment.NewLine +
+                                             "asasas" + Environment.NewLine + Environment.NewLine +
+                                             "as" + Environment.NewLine +
+                                             "asasasas " + Environment.NewLine +
+                                             "asasasas " + Environment.NewLine +
+                                             "asasas" + Environment.NewLine +
+                                             "asasa " + Environment.NewLine +
+                                             "asasa " + Environment.NewLine +
+                                             "asasas " + Environment.NewLine +
+                                             "aas" + Environment.NewLine +
+                                             "asas" + Environment.NewLine +
+                                             "asasasasas" + Environment.NewLine +
+                                             "asasasasa" + Environment.NewLine +
+                                             "asasasssssssssssssssss" + Environment.NewLine +
+                                             "asasas" + Environment.NewLine +
+                                             "asasas" + Environment.NewLine +
+                                             "assssssssssssssssssssssssss" + Environment.NewLine +
+                                             "asasasa" + Environment.NewLine +
+                                             "asasas" + Environment.NewLine +
+                                             "as" + Environment.NewLine +
+                                             "asasas" + Environment.NewLine + Environment.NewLine +
+                                             "as" + Environment.NewLine +
+                                             "asasasas " + Environment.NewLine +
+                                             "asasasas " + Environment.NewLine +
+                                             "asasas" + Environment.NewLine +
+                                             "asasa " + Environment.NewLine +
+                                             "asasa " + Environment.NewLine +
+                                             "asasas " + Environment.NewLine +
+                                             "aas" + Environment.NewLine +
+                                             "asas" + Environment.NewLine +
+                                             "asasasasas" + Environment.NewLine +
+                                             "asasasasa" + Environment.NewLine +
+                                             "asasasssssssssssssssss" + Environment.NewLine +
+                                             "asasas" + Environment.NewLine +
+                                             "asasas" + Environment.NewLine +
+                                             "assssssssssssssssssssssssss" + Environment.NewLine +
+                                             "asasasa" + Environment.NewLine +
+                                             "asasas" + Environment.NewLine +
+                                             "as" + Environment.NewLine +
+                                             "asasas" + Environment.NewLine + Environment.NewLine +
+                                             "as" + Environment.NewLine +
+                                             "asasasas " + Environment.NewLine +
+                                             "asasasas " + Environment.NewLine +
+                                             "asasas" + Environment.NewLine +
+                                             "asasa " + Environment.NewLine +
+                                             "asasa " + Environment.NewLine +
+                                             "asasas " + Environment.NewLine +
+                                             "assssssssssssssssss" },
+                BackgroundColor = Color.Pink,
+                Margin = new Thickness(5)
+            });
 
             Content = tStack;
         }
