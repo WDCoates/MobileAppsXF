@@ -119,10 +119,18 @@ namespace Ch04_ScrollingTheStack
                                              "asasas " + Environment.NewLine +
                                              "assssssssssssssssss" },
                 BackgroundColor = Color.Pink,
-                Margin = new Thickness(5)
+                Margin = new Thickness(5),
+                VerticalOptions = LayoutOptions.Start
+            });
+
+            tStack.Children.Add(new Label
+            {
+                Text = "Last but not least!"
+                , VerticalOptions = LayoutOptions.EndAndExpand
             });
 
             Content = tStack;
+            
         }
 
         private Label CreateColorLabel(Color getValue, string infoName)
