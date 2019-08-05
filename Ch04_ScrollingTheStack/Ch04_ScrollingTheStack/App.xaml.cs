@@ -17,7 +17,7 @@ namespace Ch04_ScrollingTheStack
             MainPage = new VerticalOptionsDemo
 
             {
-                Padding = new Thickness(10, TTop(), right: 30, bottom: 5)
+                Padding = new Thickness(5, TTop(), right: 5, bottom: 5)
             };
         }
 

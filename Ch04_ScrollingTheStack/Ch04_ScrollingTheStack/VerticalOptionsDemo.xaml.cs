@@ -34,10 +34,10 @@ namespace Ch04_ScrollingTheStack
             //foreach (var l in labels.Select((value, i) => new { i, value }).OrderByDescending(v => v.i))
             foreach (var l in labels.Select((value, i) => new {i, value}))
             {
-                //if (l.i < 2) continue;
+                if (l.i != 3 && l.i != 7) continue;
                 l.value.Text = $"{l.i}  {l.value.Text}";
                 sLayout.Children.Add(l.value);
-                //if (l.i >= 2) break;
+                if (l.i == 7) break;
             }
 
             Content = sLayout;
