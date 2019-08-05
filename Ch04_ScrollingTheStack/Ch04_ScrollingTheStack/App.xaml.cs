@@ -3,7 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace Ch03_DeeperIntoText
+namespace Ch04_ScrollingTheStack
 {
     public partial class App : Application
     {
@@ -11,10 +11,13 @@ namespace Ch03_DeeperIntoText
         {
             InitializeComponent();
 
-            //MainPage = new MainPage();
-            MainPage = new WelcomePage
+            //MainPage = new MainPage
+            //MainPage = new ReflectedColoursPage
+
+            MainPage = new VerticalOptionsDemo
+
             {
-                BackgroundColor = Color.Default, Padding = new Thickness(10, TTop(), right: 10, bottom: 5)
+                Padding = new Thickness(5, TTop(), right: 5, bottom: 5)
             };
         }
 
@@ -32,12 +35,7 @@ namespace Ch03_DeeperIntoText
         {
             // Handle when your app resumes
         }
-
-        /// <summary>
-        /// ToDo: Move to reusable code project
-        /// </summary>
-        /// <returns></returns>
-        double TTop()
+        private double TTop()
         {
             double top = 0.0d;
             switch (Device.RuntimePlatform)
