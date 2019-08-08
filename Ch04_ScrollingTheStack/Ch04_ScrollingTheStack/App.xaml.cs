@@ -15,7 +15,8 @@ namespace Ch04_ScrollingTheStack
             //MainPage = new ReflectedColoursPage
             //MainPage = new VerticalOptionsDemo
             //MainPage = new FrameBoxViewDemo
-            MainPage = new ColouredBlocks
+            //MainPage = new ColouredBlocks
+            MainPage = new VorVollenSchusselnPage
 
             {
                 Padding = new Thickness(5, TTop(), right: 5, bottom: 5)
