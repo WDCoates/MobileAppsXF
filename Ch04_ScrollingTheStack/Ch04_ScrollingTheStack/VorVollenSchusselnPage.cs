@@ -22,6 +22,8 @@ namespace Ch04_ScrollingTheStack
 
             //Get the document
             Assembly assembly = GetType().GetTypeInfo().Assembly;
+            var resourceIDs = assembly.GetManifestResourceNames();
+
             var resource = "Ch04_ScrollingTheStack.Documents.VorVollenSchusseln.txt";
             
             using(var stream = assembly.GetManifestResourceStream(resource))
