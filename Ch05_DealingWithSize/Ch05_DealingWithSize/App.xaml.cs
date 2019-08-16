@@ -12,7 +12,8 @@ namespace Ch05_DealingWithSize
             InitializeComponent();
 
             //MainPage = new MainPage();
-            MainPage = new WhatSizeAmI();
+            //MainPage = new WhatSizeAmI();
+            MainPage = new FontSizes();
         }
 
         protected override void OnStart()
