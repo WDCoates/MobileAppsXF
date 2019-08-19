@@ -13,7 +13,8 @@ namespace Ch05_DealingWithSize
 
             //MainPage = new MainPage();
             //MainPage = new WhatSizeAmI();
-            MainPage = new FontSizes();
+            //MainPage = new FontSizes();
+            MainPage = new FontSizesEstimated();
         }
 
         protected override void OnStart()
