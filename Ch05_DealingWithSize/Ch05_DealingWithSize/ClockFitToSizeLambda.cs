@@ -9,9 +9,9 @@ namespace Ch05_DealingWithSize
         {
             Label lClock = new Label
             {
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            };
+               HorizontalOptions = LayoutOptions.Center,
+               VerticalOptions = LayoutOptions.Center
+        };
 
             //SizeChanged event handler
             SizeChanged += (sender, args) =>
@@ -30,9 +30,13 @@ namespace Ch05_DealingWithSize
                 Children =
                 {
                     lClock
-                }
+                    
+                },
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
             };
 
+            
         }
     }
 }

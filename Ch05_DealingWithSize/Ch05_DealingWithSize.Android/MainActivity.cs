@@ -10,7 +10,7 @@ using Android.OS;
 namespace Ch05_DealingWithSize.Droid
 {
     [Activity(Label = "Ch05_DealingWithSize", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, 
-        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
