@@ -20,7 +20,7 @@ namespace Ch05_DealingWithSize
                     lClock.FontSize = this.Width / 6;
             };
 
-            Device.StartTimer(TimeSpan.FromSeconds(1), () => { lClock.Text = DateTime.Now.ToString("h:mm:ss tt");
+            Device.StartTimer(TimeSpan.FromSeconds(0.1), () => { lClock.Text = DateTime.Now.ToString("h:mm:ss tt");
                 return true;
             });
 
