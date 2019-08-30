@@ -6,12 +6,10 @@ namespace Ch05_DealingWithSize
     public class FontSizesEstimated : ContentPage
     {
         private Label _label;
-        private readonly Helper _helper;
 
         public FontSizesEstimated()
         {
             _label = new Label();
-            _helper = new Helper();
             Padding = new Thickness(0, Helper.TTop(), 0, 0);
             ContentView cView = new ContentView
             {
@@ -22,11 +20,6 @@ namespace Ch05_DealingWithSize
 
             Content = cView;
 
-        }
-
-        public Helper Helper
-        {
-            get { return _helper; }
         }
 
         void OnContentViewSizeChanged(object sender, EventArgs eArgs)
