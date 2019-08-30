@@ -12,10 +12,11 @@ namespace Ch05_DealingWithSize
             InitializeComponent();
 
             MainPage = new //MainPage();
-                          //WhatSizeAmI();
-                          //FontSizes();
-                          //FontSizesEstimated();
-                            ClockFitToSizeLambda();
+                //WhatSizeAmI();
+                //FontSizes();
+                //FontSizesEstimated();
+                //ClockFitToSizeLambda();
+                AccessibilityTests();
         }
 
         protected override void OnStart()
