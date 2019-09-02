@@ -19,13 +19,8 @@ namespace Ch05_DealingWithSize
             };
 
             cView.SizeChanged += OnContentViewSizeChanged;
-            
-            Content = new StackLayout
-            {
-                Children = {
-                    cView
-                }
-            };
+
+            Content = cView;
         }
 
         private void OnContentViewSizeChanged(object sender, EventArgs e)
@@ -35,7 +30,7 @@ namespace Ch05_DealingWithSize
             if (view.Width <= 0 || view.Height <= 0)
                 return;
 
-            label.Text = $"This is just some text to try and illustrate how best to fit text to a screen....";
+            label.Text = $"This is just some text to try and illustrate how best to fit text to a screen....View Width !!; Font Size is ??";
 
             FontCalc lFontCalc = new FontCalc(label, 10, view.Width);
             FontCalc uFontCalc = new FontCalc(label, 100, view.Width);
@@ -43,8 +38,24 @@ namespace Ch05_DealingWithSize
             while (uFontCalc.FontSize - lFontCalc.FontSize > 1)
             {
                 // Get the average font size
+                var fontSize = (lFontCalc.FontSize + uFontCalc.FontSize) / 2;
+                // Check the new text height against the container height.
+                FontCalc newFontCalc = new FontCalc(label, fontSize, view.Width);
+
+                if (newFontCalc.TextHeight > view.Height)
+                {
+                    uFontCalc = newFontCalc;
+                }
+                else
+                {
+                    lFontCalc = newFontCalc;
+                }
             }
 
+            //Set the final font size
+            label.FontSize = lFontCalc.FontSize;
+            label.Text = label.Text.Replace("!!", view.Width.ToString("F0"));
+            label.Text = label.Text.Replace("??", label.FontSize.ToString("F0"));
         }
     }
 }

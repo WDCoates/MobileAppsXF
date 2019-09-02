@@ -16,7 +16,8 @@ namespace Ch05_DealingWithSize
                 //FontSizes();
                 //FontSizesEstimated();
                 //ClockFitToSizeLambda();
-                AccessibilityTests();
+                //AccessibilityTests();
+            EmpericalFontSize();
         }
 
         protected override void OnStart()
