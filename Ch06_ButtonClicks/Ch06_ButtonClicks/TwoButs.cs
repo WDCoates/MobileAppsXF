@@ -57,7 +57,7 @@ namespace Ch06_ButtonClicks
             var button = (Button)sender;
             if (button == addBut)
             {
-                sLayout.Children.Add(new Label { Text = $"Add Button clicked at {DateTime.Now.ToString("T")}" });
+                sLayout.Children.Add(new Label { Text = $"Add Button clicked at {DateTime.Now:T}" });
             }
             else
             {
