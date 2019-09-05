@@ -12,7 +12,8 @@ namespace Ch06_ButtonClicks
             //Create the button and attach handler
             Button button = new Button
             {
-                Text = $"Log the Click and Time"
+                Text = $"Log the Click and Time",
+                CornerRadius = 10
             };
             button.Clicked += OnButtonClicked;
             loggerLayout.ChildAdded += GetOnChildAdded;
@@ -47,6 +48,19 @@ namespace Ch06_ButtonClicks
             {
                 Text = $"Button clicked at {DateTime.Now:T}"
             });
+
+            //When loggerLayout is not already defined...
+            Button button = (Button)sender;
+            
+            //Get Parent i.e. the StackLayout
+            StackLayout sLayout = (StackLayout) button.Parent;
+
+            //Second Child is the Scroll View
+            ScrollView sView = (ScrollView) sLayout.Children[1];
+
+            //The loggerLayout aslong as the layout has not changed not a recommended approach!
+            StackLayout sLayout2 = (StackLayout) sView.Content;
+
         }
     }
 }
