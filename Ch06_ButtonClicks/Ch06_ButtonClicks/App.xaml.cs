@@ -12,7 +12,8 @@ namespace Ch06_ButtonClicks
             InitializeComponent();
 
             MainPage = new //MainPage();
-                ButtonLogger ();
+                //ButtonLogger ();
+                TwoButs();
         }
 
         protected override void OnStart()

@@ -53,13 +53,13 @@ namespace Ch06_ButtonClicks
             Button button = (Button)sender;
             
             //Get Parent i.e. the StackLayout
-            StackLayout sLayout = (StackLayout) button.Parent;
+            var sLayout = (StackLayout) button.Parent;
 
             //Second Child is the Scroll View
-            ScrollView sView = (ScrollView) sLayout.Children[1];
+            var sView = (ScrollView) sLayout.Children[1];
 
             //The loggerLayout aslong as the layout has not changed not a recommended approach!
-            StackLayout sLayout2 = (StackLayout) sView.Content;
+            var sLayout2 = (StackLayout) sView.Content;
 
         }
     }
