@@ -14,7 +14,8 @@ namespace Ch06_ButtonClicks
             MainPage = new //MainPage();
                 //ButtonLogger ();
                 //TwoButs();
-                LambdaButtons();
+                //LambdaButtons();
+                KeyPad();
         }
 
         protected override void OnStart()
