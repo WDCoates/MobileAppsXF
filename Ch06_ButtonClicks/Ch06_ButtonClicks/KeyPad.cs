@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace Ch06_ButtonClicks
         private Button backspaceButton;
         public KeyPad()
         {
+
             StackLayout mainStack = new StackLayout
             {
                 VerticalOptions = LayoutOptions.Center,
@@ -38,6 +40,15 @@ namespace Ch06_ButtonClicks
             };
             backspaceButton.Clicked += OnBackspaceButtonClicked;
             mainStack.Children.Add(backspaceButton);
+
+            //Get Saved Data
+            IDictionary<string, object> appProps = Application.Current.Properties;
+            if (appProps.ContainsKey("displayLabelText"))
+            {
+                displayLabel.Text = appProps["displayLabelText"] as string;
+                backspaceButton.IsEnabled = displayLabel.Text?.Length > 0;
+            }
+
 
             //Next the 10 number keys
             StackLayout numberStack = null;
@@ -85,6 +96,7 @@ namespace Ch06_ButtonClicks
             Button but = (Button)sender;
             displayLabel.Text += (string) but.StyleId;
             backspaceButton.IsEnabled = true;
+            Application.Current.Properties["displayLabelText"] = displayLabel.Text;
         }
 
         private void OnBackspaceButtonClicked(object sender, EventArgs e)
@@ -92,6 +104,7 @@ namespace Ch06_ButtonClicks
             string text = displayLabel.Text;
             displayLabel.Text = text.Substring(0, text.Length - 1);
             backspaceButton.IsEnabled = displayLabel.Text.Length > 0;
+            Application.Current.Properties["displayLabelText"] = displayLabel.Text;
         }
     }
 }
