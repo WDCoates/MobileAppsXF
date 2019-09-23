@@ -89,6 +89,10 @@ namespace Ch06_ButtonClicks
                 Padding = new Thickness(10)
             };
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+        }
 
         private void OnNumButtonClicked(object sender, EventArgs e)
         {
