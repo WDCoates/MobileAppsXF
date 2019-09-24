@@ -16,7 +16,8 @@
         <!--&nbsp; not supported use &#xA0;-->
         <Label Text="Space&#xa0;Space&#160;Space" 
                HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
+               VerticalOptions="CenterAndExpand" 
+               x:Name="lblSpace"/>
     </StackLayout>
 
 </ContentPage>

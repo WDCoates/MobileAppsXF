@@ -12,6 +12,11 @@ namespace Ch07_XAMLvsCode
         public MainPage()
         {
             InitializeComponent();
+
+            var cTc = new ColorTypeConverter();
+            var res = cTc.ConvertFromInvariantString("Blue");
+            lblSpace.BackgroundColor = Color.Yellow;
+
         }
     }
 }
