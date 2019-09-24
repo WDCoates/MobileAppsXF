@@ -10,7 +10,11 @@
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
         <!--Unicode characters! Line Break Char is 000A but leading zeros are not required and spaces are used!-->
-        <Label Text="Cost &#x2014; &#x20AC; 123.45&#xA;Fees &#x2014; &#x20AC; 222.00" 
+        <Label Text="Cost &#x2014; &#x20AC; 123.45&#xA;Fees &#x2014; &#x20AC; 222.00&#10;&lt;Left and Right&gt;" 
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        <!--&nbsp; not supported use &#xA0;-->
+        <Label Text="Space&#xa0;Space&#160;Space" 
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" />
     </StackLayout>
