@@ -11,7 +11,8 @@ namespace Ch07_XAMLvsCode
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new //MainPage();
+                StackViewPage1();
         }
 
         protected override void OnStart()

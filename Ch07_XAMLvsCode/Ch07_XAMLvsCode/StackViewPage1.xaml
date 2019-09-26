@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch07_XAMLvsCode.StackViewPage1">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Children>
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout.Children>
+                        <BoxView Color="Red" />
+                        <Label>
+                            <Label.Text>Box View 1 In Red</Label.Text>
+                        </Label>
+                    </StackLayout.Children>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout.Children>
+                        <BoxView Color="Orange" />
+                        <Label>
+                            <Label.Text>Box View 2 In Orange</Label.Text>
+                        </Label>
+                    </StackLayout.Children>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout.Children>
+                        <BoxView Color="Green" />
+                        <Label>
+                            <Label.Text>Box View 2 In Green</Label.Text>
+                        </Label>
+                    </StackLayout.Children>
+                </StackLayout>
+
+            </StackLayout.Children>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
