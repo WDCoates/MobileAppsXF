@@ -17,7 +17,35 @@
         <Label Text="Space&#xa0;Space&#160;Space" 
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" 
-               x:Name="lblSpace"/>
+               x:Name="LblSpace"/>
+
+        <!--Adding a Label to a Frame using a property element -->
+        <Frame>
+            <Frame.Content>
+                <Label Text="Label Text within the Frame.Content" BackgroundColor="AliceBlue"/>
+            </Frame.Content>
+            <Frame.BorderColor>
+                <Color>Green</Color>
+            </Frame.BorderColor>
+            <Frame.HorizontalOptions>
+                <LayoutOptions Alignment="Center" />
+            </Frame.HorizontalOptions>
+            
+            <!--Deeper Still-->
+            <Frame.VerticalOptions>
+                <LayoutOptions>
+                    <LayoutOptions.Alignment>
+                        Center
+                    </LayoutOptions.Alignment>
+                    <LayoutOptions.Expands>
+                        True
+                    </LayoutOptions.Expands>
+                </LayoutOptions>
+            </Frame.VerticalOptions>
+        </Frame>
+
     </StackLayout>
+
+
 
 </ContentPage>
