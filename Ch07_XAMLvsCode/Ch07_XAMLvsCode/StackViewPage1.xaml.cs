@@ -22,7 +22,7 @@ namespace Ch07_XAMLvsCode
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                 FontAttributes = FontAttributes.Bold | FontAttributes.Italic
             };
-            var c = ((StackLayout)Content).Children.Count;
+            
             ((StackLayout)Content).Children.Insert(0, label);
             
             Label label2 = new Label
@@ -37,9 +37,9 @@ namespace Ch07_XAMLvsCode
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                 FontAttributes = FontAttributes.Bold | FontAttributes.Italic
             };
-            
 
-            ((StackLayout) Content).Children.Insert(c+1, label2);
+            var c = ((StackLayout)Content).Children.Count;
+            ((StackLayout) Content).Children.Insert(c, label2);
         }
 	}
 }
