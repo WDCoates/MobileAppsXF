@@ -38,8 +38,8 @@ namespace Ch07_XAMLvsCode
                 FontAttributes = FontAttributes.Bold | FontAttributes.Italic
             };
 
-            var c = ((StackLayout)Content).Children.Count;
-            ((StackLayout) Content).Children.Insert(c, label2);
+            var c = StackLayout00.Children.Count;
+            StackLayout00.Children.Insert(c, label2);
         }
 	}
 }
