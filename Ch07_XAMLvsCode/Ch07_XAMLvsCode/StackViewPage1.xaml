@@ -1,8 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ch07_XAMLvsCode.StackViewPage1"
-             Padding="0, 15, 0, 5">
+             x:Class="Ch07_XAMLvsCode.StackViewPage1">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="0, 20, 0, 0" />
+                <On Platform="Android" Value="0, 5, 0, 0" />
+                <On Platform="UWP, WPF" Value="0, 10, 0, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
     <ContentPage.Content>
         <StackLayout x:Name="StackLayout00">
             <StackLayout.Children>

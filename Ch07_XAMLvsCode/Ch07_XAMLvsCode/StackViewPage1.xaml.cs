@@ -16,7 +16,7 @@ namespace Ch07_XAMLvsCode
                 IsVisible = true,
                 Opacity = 0.75,
                 HorizontalTextAlignment = TextAlignment.Center,
-                VerticalOptions = LayoutOptions.CenterAndExpand,
+                VerticalOptions = LayoutOptions.StartAndExpand,
                 TextColor = Color.Blue,
                 BackgroundColor = Color.FromRgb(255, 128, 128),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),

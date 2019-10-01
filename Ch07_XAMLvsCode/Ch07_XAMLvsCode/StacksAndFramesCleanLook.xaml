@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch07_XAMLvsCode.StacksAndFramesCleanLook">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" Default="0, 10, 0, 0" >
+            <On Platform="Android, UWP, WPF">0,10,0,5</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout x:Name="StackLayout00">
+        <Frame BorderColor="Accent">
+            <StackLayout Orientation="Horizontal">
+                <BoxView Color="Red" />
+                <Label>
+                    <Label.Text>Box View 1 In Red</Label.Text>
+                </Label>
+            </StackLayout>
+        </Frame>
+
+        <Frame BorderColor="Accent">
+            <StackLayout Orientation="Horizontal">
+                <BoxView Color="Orange" />
+                <Label>
+                    <Label.Text>Box View 2 In Orange</Label.Text>
+                </Label>
+            </StackLayout>
+        </Frame>
+
+        <Frame BorderColor="Accent">
+            <StackLayout Orientation="Horizontal">
+                <BoxView Color="Green" />
+                <Label>
+                    <Label.Text>Box View 2 In Green</Label.Text>
+                </Label>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
