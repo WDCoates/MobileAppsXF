@@ -31,9 +31,44 @@
             <Label 
                    Text=
 "4: Perhaps the least problematic is to put it in like this, left justified in the code!
-but this I'm sure is not always possible
+but this 
+I'm sure is not always possible
 in real world systems anyway! eof characters are converted to spaces."
                    />
+
+            <Label>
+5: Text as content has the curse of breaks
+at each line's close.
+
+This is good for verse but not for prose!
+The end.
+            </Label>
+
+            <Label VerticalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="6: A single line "/>
+                        <Span Text="bold" FontAttributes="Bold" />
+                        <Span Text=" and " />
+                        <Span Text="large" FontSize="Large" />
+                        <Span Text=" text."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label VerticalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text=
+"7: A paragraph yexy requires left justifying in the XAML file.
+How will this work within code I wonder. Again more "/>
+                        <Span Text="bold" FontAttributes="Bold" />
+                        <Span Text=" and " />
+                        <Span Text="large" FontSize="Large" />
+                        <Span Text=" text."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
         </StackLayout>
     </ScrollView>
