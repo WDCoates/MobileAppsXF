@@ -23,7 +23,7 @@ namespace Ch08_CodeandXAMLinHarmony
         {
             DateTime dateTime = DateTime.Now;
             timeLabel.Text = $"{dateTime:T}";
-            dateLabel.Text = $"{dateTime:ddMMMyy}";
+            dateLabel.Text = $"{dateTime:dd-MMM-yyyy}";
             return true;
         }
     }
