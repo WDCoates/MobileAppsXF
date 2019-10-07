@@ -11,9 +11,12 @@ namespace Ch08_CodeandXAMLinHarmony
         {
             InitializeComponent();
 
-            MainPage = new 
+            MainPage = new
                     //MainPage()
-                    S1ParamsConstructor()
+                    //
+                    //S1ParamsConstructor()
+                    //S2FactoryMethod()
+                    S3XamlClock()
                 ;
         }
 
