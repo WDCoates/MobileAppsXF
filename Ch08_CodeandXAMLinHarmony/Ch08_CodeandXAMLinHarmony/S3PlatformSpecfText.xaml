@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch08_CodeandXAMLinHarmony.S3PlatformSpecfText">
+
+    <StackLayout>
+        <Label x:Name="deviceLabel"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center">
+            <Label.Text>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="Android">This is text for Androids</On>
+                    <On Platform="UWP">This is Text for Windows 10 Apps</On>
+                </OnPlatform>
+            </Label.Text>
+
+        </Label>
+
+        <Label x:Name="deviceLabel2"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center">
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="Android">Label without Label.Text on Android.</On>
+                    <On Platform="UWP, WPF">Label without Label.Text in a Windows 10 App.</On>
+                </OnPlatform>
+            
+        </Label>
+    </StackLayout>
+
+</ContentPage>

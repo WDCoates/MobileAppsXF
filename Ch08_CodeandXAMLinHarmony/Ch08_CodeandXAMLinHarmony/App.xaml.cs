@@ -16,7 +16,8 @@ namespace Ch08_CodeandXAMLinHarmony
                     //
                     //S1ParamsConstructor()
                     //S2FactoryMethod()
-                    S3XamlClock()
+                    //S3XamlClock()
+                    S3PlatformSpecfText()
                 ;
         }
 
