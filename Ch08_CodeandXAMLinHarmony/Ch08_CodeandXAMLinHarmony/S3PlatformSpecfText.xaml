@@ -5,7 +5,7 @@
 
     <StackLayout>
         <Label x:Name="deviceLabel"
-                VerticalOptions="Center" 
+                VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="Center">
             <Label.Text>
                 <OnPlatform x:TypeArguments="x:String">
@@ -17,7 +17,7 @@
         </Label>
 
         <Label x:Name="deviceLabel2"
-           VerticalOptions="Center" 
+           VerticalOptions="CenterAndExpand" 
            HorizontalOptions="Center">
                 <OnPlatform x:TypeArguments="x:String">
                     <On Platform="Android">Label without Label.Text on Android.</On>
