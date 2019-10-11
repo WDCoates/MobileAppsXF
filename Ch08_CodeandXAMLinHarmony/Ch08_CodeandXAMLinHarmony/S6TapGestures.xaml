@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch08_CodeandXAMLinHarmony.S6TapGestures">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android">0,20</On>
+            <On Platform="UWP">0,20</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    
+    <StackLayout>
+        <BoxView x:Name="boxV0" VerticalOptions="FillAndExpand" >
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBoxViewTapped" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+
+        <BoxView x:Name="boxV1" VerticalOptions="FillAndExpand" >
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBoxViewTapped" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+
+        <Button x:Name="bStart" Text="Begin" FontSize="Large" HorizontalOptions="Center" Clicked="OnbStartClicked">
+        </Button>
+
+        <BoxView x:Name="boxV2" VerticalOptions="FillAndExpand" >
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBoxViewTapped" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+
+        <BoxView x:Name="boxV3" VerticalOptions="FillAndExpand" >
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBoxViewTapped" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+    </StackLayout>
+
+</ContentPage>

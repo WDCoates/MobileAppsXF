@@ -27,7 +27,8 @@ namespace Ch08_CodeandXAMLinHarmony
                 //S3XamlClock()
                 //S3PlatformSpecfText()
                 //S4ColourPage1withCustomView()
-                S5XamlKeypadPage()
+                //S5XamlKeypadPage()
+                S6TapGestures()
                 ;
         }
 
