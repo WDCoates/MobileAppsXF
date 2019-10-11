@@ -7,9 +7,17 @@ namespace Ch08_CodeandXAMLinHarmony
 {
     public partial class App : Application
     {
+        private const string dspLblTxt = "DisplayLabelText";
+        public string DisplayLabelText { get; set; }
+
         public App()
         {
             InitializeComponent();
+
+            if (Properties.ContainsKey(dspLblTxt))
+            {
+                DisplayLabelText = (string) Properties[dspLblTxt];
+            }
 
             MainPage = new
                 //MainPage()
@@ -18,7 +26,8 @@ namespace Ch08_CodeandXAMLinHarmony
                 //S2FactoryMethod()
                 //S3XamlClock()
                 //S3PlatformSpecfText()
-                S4ColourPage1withCustomView()
+                //S4ColourPage1withCustomView()
+                S5XamlKeypadPage()
                 ;
         }
 
@@ -30,6 +39,7 @@ namespace Ch08_CodeandXAMLinHarmony
         protected override void OnSleep()
         {
             // Handle when your app sleeps
+            Properties[dspLblTxt] = DisplayLabelText;
         }
 
         protected override void OnResume()
