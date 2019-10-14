@@ -39,4 +39,37 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S1ParamsConstructor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S2FactoryMethod.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S3PlatformSpecfText.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S3XamlClock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S4ColourPage1withCustomView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S4ColourView1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S5XamlKeypadPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S6TapGestures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
 </Project>

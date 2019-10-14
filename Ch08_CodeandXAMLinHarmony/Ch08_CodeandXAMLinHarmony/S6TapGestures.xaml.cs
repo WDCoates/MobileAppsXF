@@ -22,7 +22,7 @@ namespace Ch08_CodeandXAMLinHarmony
         private Color[] colours = {Color.Red, Color.Green, Color.Blue, Color.Purple};
         private List<int> seq = new List<int>();
         private int seqIndex;
-        private bool awaitTaps;
+        private bool _awaitTap;
         private bool gameEnded;
         private Random rnd = new Random();
 
@@ -44,12 +44,87 @@ namespace Ch08_CodeandXAMLinHarmony
 
         private void OnBoxViewTapped(object sender, EventArgs e)
         {
-            
+            if (gameEnded)
+                return;
+
+            if (!_awaitTap)
+            {
+                EndGame();
+                return;
+            }
+
+            BoxView tappedBoxView = (BoxView)sender;
+            int i = Array.IndexOf(boxViews, tappedBoxView);
+
+            if (i != seq[seqIndex])
+            {
+                EndGame();
+                return;
+            }
+
+            FlashBox(i);
+
+            seqIndex++;
+            _awaitTap = seqIndex < seq.Count;
+
+            if (!_awaitTap)
+            {
+                StartSequence();
+            }
+
+        }
+
+        protected virtual void EndGame()
+        {
+            gameEnded = true;
+
+            for (int i = 0; i < 4; i++)
+            {
+                boxViews[i].Color = Color.Gray;
+            }
+
+            bStart.Text = $"Failed @{seq.Count}. Try Again?";
+            bStart.IsVisible = true;
+
         }
 
         private void OnbStartClicked(object sender, EventArgs e)
         {
-            
+            gameEnded = false;
+            bStart.IsVisible = false;
+            InitBoxViewColours();
+            seq.Clear();
+            StartSequence();
+        }
+
+        private void StartSequence()
+        {
+            seq.Add(rnd.Next(4));
+            seqIndex = 0;
+            Device.StartTimer(TimeSpan.FromMilliseconds(seqTime), OnTimerTick);
+
+        }
+
+        private bool OnTimerTick()
+        {
+            if(gameEnded)
+                return false;
+
+            FlashBox(seq[seqIndex]);
+            seqIndex++;
+            _awaitTap = seqIndex == seq.Count;
+            seqIndex = _awaitTap ? 0 : seqIndex;
+            return !_awaitTap;
+        }
+
+        private void FlashBox(int i)
+        {
+            boxViews[i].Color = colours[i].WithLuminosity(onLum);
+            Device.StartTimer(TimeSpan.FromMilliseconds(flashDuration), () => { 
+                if (gameEnded) return false;
+                boxViews[i].Color = colours[i].WithLuminosity(offLum);
+                    return false;
+                });
 
         }
     }
