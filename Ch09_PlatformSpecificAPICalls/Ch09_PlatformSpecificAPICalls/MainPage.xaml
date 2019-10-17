@@ -4,11 +4,23 @@
              xmlns:local="clr-namespace:Ch09_PlatformSpecificAPICalls"
              x:Class="Ch09_PlatformSpecificAPICalls.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout Padding="20">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Device Model:"/>
+
+            <ContentView Padding="50,0,0,0">
+                <Label x:Name="lDeviceModel" FontSize="Large"></Label>
+            </ContentView>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Operating System Version:"/>
+
+            <ContentView Padding="50,0,0,0">
+                <Label x:Name="lVersion" FontSize="Large"></Label>
+            </ContentView>
+
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
