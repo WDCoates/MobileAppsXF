@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Ch09_PltfrmInfDpndSrvc"
+             x:Class="Ch09_PltfrmInfDpndSrvc.MainPage">
+
+    <StackLayout Padding="20">
+        <Label HorizontalOptions="Center" Text="This is using Standard Project and Reflection through a DependencyService"></Label>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Device Model:" FontSize="Large"/>
+
+            <ContentView Padding="50,0,0,0">
+                <Label x:Name="lDeviceModel" FontSize="Large"></Label>
+            </ContentView>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Operating System Version:" FontSize="Large"/>
+
+            <ContentView Padding="50,0,0,0">
+                <Label x:Name="lVersion" FontSize="Large"></Label>
+            </ContentView>
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
