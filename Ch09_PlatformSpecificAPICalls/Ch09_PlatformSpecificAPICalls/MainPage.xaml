@@ -4,23 +4,42 @@
              xmlns:local="clr-namespace:Ch09_PlatformSpecificAPICalls"
              x:Class="Ch09_PlatformSpecificAPICalls.MainPage">
 
+
     <StackLayout Padding="20">
-        <StackLayout VerticalOptions="CenterAndExpand">
-            <Label Text="Device Model:"/>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label Text="Device Model:"/>
 
-            <ContentView Padding="50,0,0,0">
-                <Label x:Name="lDeviceModel" FontSize="Large"></Label>
-            </ContentView>
-        </StackLayout>
+                <ContentView Padding="50,0,0,0">
+                    <Label x:Name="lDeviceModel" FontSize="Large"></Label>
+                </ContentView>
+            </StackLayout>
 
-        <StackLayout VerticalOptions="CenterAndExpand">
-            <Label Text="Operating System Version:"/>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label Text="Operating System Version:"/>
 
-            <ContentView Padding="50,0,0,0">
-                <Label x:Name="lVersion" FontSize="Large"></Label>
-            </ContentView>
+                <ContentView Padding="50,0,0,0">
+                    <Label x:Name="lVersion" FontSize="Large"></Label>
+                </ContentView>
 
-        </StackLayout>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label Text="Device Model:"/>
+
+                <ContentView Padding="50,0,0,0">
+                    <Label x:Name="lDeviceModel2" FontSize="Large"></Label>
+                </ContentView>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label Text="Operating System Version:"/>
+
+                <ContentView Padding="50,0,0,0">
+                    <Label x:Name="lVersion2" FontSize="Large"></Label>
+                </ContentView>
+
+            </StackLayout>
+
     </StackLayout>
 
 </ContentPage>
