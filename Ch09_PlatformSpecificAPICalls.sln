@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch09_PltfrmInfDpndSrvc.Andr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch09_PltfrmInfDpndSrvc.UWP", "Ch09_PltfrmInfDpndSrvc\Ch09_PltfrmInfDpndSrvc.UWP\Ch09_PltfrmInfDpndSrvc.UWP.csproj", "{88E0C6BA-19BB-4975-94B8-1917A1147296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch09_PltfrmInfDpndSrvc", "Ch09_PltfrmInfDpndSrvc\Ch09_PltfrmInfDpndSrvc\Ch09_PltfrmInfDpndSrvc.csproj", "{702C695B-D727-47B9-8AE3-D9013155AADE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch09_PltfrmInfDpndSrvc", "Ch09_PltfrmInfDpndSrvc\Ch09_PltfrmInfDpndSrvc\Ch09_PltfrmInfDpndSrvc.csproj", "{702C695B-D727-47B9-8AE3-D9013155AADE}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

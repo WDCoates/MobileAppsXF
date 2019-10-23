@@ -22,6 +22,11 @@
             </ContentView>
 
         </StackLayout>
+        
+            <Button VerticalOptions="CenterAndExpand" BorderWidth="10"
+                    Text="Push Me" Clicked="OnPushed">
+            </Button>
+        
     </StackLayout>
 
 </ContentPage>

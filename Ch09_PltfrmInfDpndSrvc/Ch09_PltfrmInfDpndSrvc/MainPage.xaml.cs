@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Ch09_PltfrmInfDpndSrvc
@@ -16,6 +12,11 @@ namespace Ch09_PltfrmInfDpndSrvc
             IPlatformInfo platformInfo = DependencyService.Get<IPlatformInfo>();
             lDeviceModel.Text = platformInfo.GetModel();
             lVersion.Text = platformInfo.GetVersion();
+        }
+
+        private void OnPushed(object sender, EventArgs e)
+        {
+            //ToDo AddSound
         }
     }
 }
