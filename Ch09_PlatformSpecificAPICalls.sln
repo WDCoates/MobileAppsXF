@@ -15,11 +15,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch09_PltfrmInfDpndSrvc.UWP"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch09_PltfrmInfDpndSrvc", "Ch09_PltfrmInfDpndSrvc\Ch09_PltfrmInfDpndSrvc\Ch09_PltfrmInfDpndSrvc.csproj", "{702C695B-D727-47B9-8AE3-D9013155AADE}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WinRuntimeShared", "WinRuntimeShared\WinRuntimeShared.shproj", "{FA7639E8-51FE-4397-98E0-9648587CB3D0}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		WinRuntimeShared\WinRuntimeShared.projitems*{88e0c6ba-19bb-4975-94b8-1917a1147296}*SharedItemsImports = 4
 		Ch09_PlatformSpecificAPICalls\Ch09_PlatformSpecificAPICalls\Ch09_PlatformSpecificAPICalls.projitems*{b9d0afa0-c812-4eb2-a6e9-ab6916539473}*SharedItemsImports = 13
 		Ch09_PlatformSpecificAPICalls\Ch09_PlatformSpecificAPICalls\Ch09_PlatformSpecificAPICalls.projitems*{d8c04c7e-ccd4-4c4c-b96d-26d88f81a26f}*SharedItemsImports = 4
 		Ch09_PlatformSpecificAPICalls\Ch09_PlatformSpecificAPICalls\Ch09_PlatformSpecificAPICalls.projitems*{f2722aad-bb74-43e3-b7c0-8c1af1e5fb66}*SharedItemsImports = 4
+		WinRuntimeShared\WinRuntimeShared.projitems*{fa7639e8-51fe-4397-98e0-9648587cb3d0}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

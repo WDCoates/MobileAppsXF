@@ -95,6 +95,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SoundPlayer.cs" />
     <Compile Include="PlatformSpecificInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -153,6 +154,7 @@
       <Name>Ch09_PltfrmInfDpndSrvc</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\..\WinRuntimeShared\WinRuntimeShared.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
