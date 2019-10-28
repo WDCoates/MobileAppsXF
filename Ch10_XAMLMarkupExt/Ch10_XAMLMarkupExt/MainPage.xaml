@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Ch10_XAMLMarkupExt"
+             x:Class="Ch10_XAMLMarkupExt.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Label Text="Something Simple">
+            <Label.VerticalOptions>
+                <x:StaticExtension Member="LayoutOptions.CenterAndExpand" />
+            </Label.VerticalOptions>
+            
+            <Label.FontAttributes>
+                <x:Static Member="FontAttributes.Italic"/>
+            </Label.FontAttributes>
+
+        </Label>
+
+        <Label Text="The real reduction benefit!" BackgroundColor="{x:Static Member=Color.Accent}"
+               TextColor="{x:Static Member=Color.Red}" VerticalOptions="{x:Static Member=LayoutOptions.CenterAndExpand}"
+               />
+
+        <Label Text="Markup extensions that have only one property - BackgroundColor=&quot;{x:Static Color.Yellow}&quot;" BackgroundColor="{x:Static Color.Yellow}"
+               TextColor="{x:Static Color.Blue}" HorizontalOptions="{x:Static LayoutOptions.CenterAndExpand}" 
+                VerticalOptions="{x:Static LayoutOptions.CenterAndExpand}"
+        />
+    </StackLayout>
+
+</ContentPage>
