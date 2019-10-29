@@ -28,6 +28,8 @@
                TextColor="{x:Static Color.Blue}" HorizontalOptions="{x:Static LayoutOptions.CenterAndExpand}" 
                 VerticalOptions="{x:Static LayoutOptions.CenterAndExpand}"
         />
+
+        
     </StackLayout>
 
 </ContentPage>
