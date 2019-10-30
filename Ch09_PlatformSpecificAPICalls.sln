@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.902
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch09_PlatformSpecificAPICalls.Android", "Ch09_PlatformSpecificAPICalls\Ch09_PlatformSpecificAPICalls.Android\Ch09_PlatformSpecificAPICalls.Android.csproj", "{D8C04C7E-CCD4-4C4C-B96D-26D88F81A26F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch09_PlatSpcficAPICalls.Android", "Ch09_PlatformSpecificAPICalls\Ch09_PlatformSpecificAPICalls.Android\Ch09_PlatSpcficAPICalls.Android.csproj", "{D8C04C7E-CCD4-4C4C-B96D-26D88F81A26F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch09_PlatformSpecificAPICalls.UWP", "Ch09_PlatformSpecificAPICalls\Ch09_PlatformSpecificAPICalls.UWP\Ch09_PlatformSpecificAPICalls.UWP.csproj", "{F2722AAD-BB74-43E3-B7C0-8C1AF1E5FB66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch09_PlatSpcficAPICalls.UWP", "Ch09_PlatformSpecificAPICalls\Ch09_PlatformSpecificAPICalls.UWP\Ch09_PlatSpcficAPICalls.UWP.csproj", "{F2722AAD-BB74-43E3-B7C0-8C1AF1E5FB66}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Ch09_PlatformSpecificAPICalls", "Ch09_PlatformSpecificAPICalls\Ch09_PlatformSpecificAPICalls\Ch09_PlatformSpecificAPICalls.shproj", "{B9D0AFA0-C812-4EB2-A6E9-AB6916539473}"
 EndProject
