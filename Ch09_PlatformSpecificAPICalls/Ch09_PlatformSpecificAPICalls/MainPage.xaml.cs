@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 #if __ANDROID__
 using Android.OS;
@@ -28,6 +27,11 @@ namespace Ch09_PlatformSpecificAPICalls
             lDeviceModel.Text = $"{devInfo.SystemManufacturer}, {devInfo.SystemProductName}";
             lVersion.Text = devInfo.OperatingSystem;
 #endif
+
+            PlatformSpecificInfo pInfo = new PlatformSpecificInfo();
+            lDeviceModel2.Text = pInfo.GetModel();
+            lVersion2.Text = pInfo.GetVersion();
+
         }
     }
 }
