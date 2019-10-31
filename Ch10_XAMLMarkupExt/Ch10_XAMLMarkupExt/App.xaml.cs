@@ -11,7 +11,10 @@ namespace Ch10_XAMLMarkupExt
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new
+                    //MainPage()
+                    S2_SharedStatics()
+                ;
         }
 
         protected override void OnStart()
