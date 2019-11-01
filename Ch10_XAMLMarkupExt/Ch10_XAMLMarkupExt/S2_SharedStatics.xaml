@@ -73,6 +73,14 @@
 
         </Label>
 
+<Label Text="{}{ Some nice text but had to put {} before all this! }"/>
+
+        <Label HorizontalOptions="Center">
+            <Label.FormattedText>
+                "{This is formated text with {} and nothing at the front!}"
+            </Label.FormattedText>
+        </Label>
+
     </StackLayout>
 
 </ContentPage>
