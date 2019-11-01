@@ -13,7 +13,8 @@ namespace Ch10_XAMLMarkupExt
 
             MainPage = new
                     //MainPage()
-                    S2_SharedStatics()
+                    //S2_SharedStatics()
+                    S3_StaticResource()
                 ;
         }
 
