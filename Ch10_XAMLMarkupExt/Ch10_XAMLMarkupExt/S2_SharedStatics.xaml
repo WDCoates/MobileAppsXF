@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Ch10_XAMLMarkupExt"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="Ch10_XAMLMarkupExt.S2_SharedStatics"
              BackgroundColor="{x:Static local:AppConstant.LightBackground}"
              >
@@ -17,8 +18,68 @@
         
         <Label Text="Using Application Static Class!"
                TextColor="{x:Static local:AppConstant.DarkForeground}"
+               FontSize="{x:Static local:AppConstant.TitleFontSize}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+
+
+        <Label Text="Static Normal FontSize!"
+               TextColor="{x:Static local:AppConstant.DarkForeground}"
+               FontSize="{x:Static local:AppConstant.NormalFontSize}"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" />
+
+        <Label Text="I like it when you Emphasis me!"
+               TextColor="{x:Static local:AppConstant.DarkForeground}"
+               FontSize="{x:Static local:AppConstant.NormalFontSize}"
+               FontAttributes="{x:Static local:AppConstant.Emphasis}"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" />
+
+        <Label Text="Even better with both Emphasis in me!"
+               TextColor="{x:Static local:AppConstant.DarkForeground}"
+               FontSize="{x:Static local:AppConstant.NormalFontSize}"
+               FontAttributes="{x:Static local:AppConstant.SupperEmphasis}"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand">
+        </Label>
+
+        <Button Text="Using Standard System static functions"
+                BorderWidth="{x:Static sys:Math.PI}"
+                BorderColor="Accent"
+                HorizontalOptions="Center">
+
+        </Button>
+        <Button Text="No functions Standard Width"
+                BorderColor="Accent"
+                HorizontalOptions="Center">
+
+        </Button>
+
+        <Label HorizontalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{x:Static sys:Environment.NewLine}" />
+                    <Span Text="Three little lines of text" />
+                    <Span Text="{x:Static sys:Environment.NewLine}" />
+                    <Span Text="{x:Static sys:Environment.NewLine}" />
+                    <Span Text="using sys:Environment.NewLine"/>
+                    <Span Text="{x:Static sys:Environment.NewLine}" />
+                    <Span Text="{x:Static sys:Environment.NewLine}" />
+                    <Span Text="In-between"/>
+                    <Span Text="{x:Static sys:Environment.NewLine}" />
+                </FormattedString>
+            </Label.FormattedText>
+
+        </Label>
+
+<Label Text="{}{ Some nice text but had to put {} before all this! }"/>
+
+        <Label HorizontalOptions="Center">
+            <Label.FormattedText>
+                "{This is formated text with {} and nothing at the front!}"
+            </Label.FormattedText>
+        </Label>
 
     </StackLayout>
 
