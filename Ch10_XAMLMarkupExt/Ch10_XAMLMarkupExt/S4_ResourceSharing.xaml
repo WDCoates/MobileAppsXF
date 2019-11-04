@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch10_XAMLMarkupExt.S4_ResourceSharing">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android" Value="0, 5, 0, 0" />
+            <On Platform="UWP, WPF" Value="0, 15, 0, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    
+    <ContentPage.Resources>
+        <!--The ResourceDictionary needs to be explicitly instantiated-->
+        <ResourceDictionary>
+            <LayoutOptions x:Key="HrzOptCnt">Center</LayoutOptions>
+            <LayoutOptions x:Key="VrtOptCntExp" Alignment="Center" Expands="True"/>
+
+            <x:Double x:Key="BrdWdt">3</x:Double>
+
+            <Color x:Key="ClrRed">Red</Color>
+            <Color x:Key="ClrYlw">#ffffff00</Color>
+
+            <Color x:Key="TxtClr" x:FactoryMethod="FromHsla">
+                <x:Arguments>
+                    <x:Double>0</x:Double>
+                    <x:Double>1</x:Double>
+                    <x:Double>0.5</x:Double>
+                    <x:Double>1</x:Double>
+                </x:Arguments>
+            </Color>
+
+            <!--No Platform Specific Stuff-->
+            <OnPlatform x:Key="BackgroundColor" x:TypeArguments="Color">
+                <On Platform="Android" Value="Yellow"/>
+                <On Platform="UWP, WPF" Value="Pink"/>
+            </OnPlatform>
+
+            <OnPlatform x:Key="BorderColor" x:TypeArguments="Color">
+                <On Platform="Android" Value="Black"/>
+                <On Platform="UWP, WPF" Value="Green"/>
+            </OnPlatform>
+
+            <x:String x:Key="FntSze">Large</x:String>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Xamarin.Forms - Resource dictionaries - Static Resources"
+                HorizontalOptions="CenterAndExpand" VerticalOptions="Start" />
+
+            <Button Text=" Carpe diem " HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BorderWidth="3" TextColor="Yellow"
+                    FontSize="Large">
+                <Button.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="#404040" />
+                        <On Platform="UWP, WPF" Value="#404040" />
+                    </OnPlatform>
+                </Button.BackgroundColor>
+                <Button.BorderColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="White" />
+                        <On Platform="UWP, WPF" Value="Yellow" />
+                    </OnPlatform>
+                </Button.BorderColor>
+            </Button>
+
+            <Button Text=" Sapere aude " HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BorderWidth="3" TextColor="Yellow"
+                    FontSize="Large">
+                <Button.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="#404040" />
+                        <On Platform="UWP, WPF" Value="#404040" />
+                    </OnPlatform>
+                </Button.BackgroundColor>
+                <Button.BorderColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="White" />
+                        <On Platform="UWP, WPF" Value="Yellow" />
+                    </OnPlatform>
+                </Button.BorderColor>
+            </Button>
+
+            <Button Text=" Discere faciendo " HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BorderWidth="3" TextColor="Yellow"
+                    FontSize="Large">
+                <Button.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="#404040" />
+                        <On Platform="UWP, WPF" Value="#404040" />
+                    </OnPlatform>
+                </Button.BackgroundColor>
+                <Button.BorderColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="White" />
+                        <On Platform="UWP, WPF" Value="Yellow" />
+                    </OnPlatform>
+                </Button.BorderColor>
+            </Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
