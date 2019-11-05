@@ -18,7 +18,8 @@
             <x:Double x:Key="BrdWdt">3</x:Double>
 
             <Color x:Key="ClrRed">Red</Color>
-            <Color x:Key="ClrYlw">#ffffff00</Color>
+            <Color x:Key="ClrWht">#ffffff</Color>
+            <Color x:Key="ClrBlu">blue</Color>
 
             <Color x:Key="TxtClr" x:FactoryMethod="FromHsla">
                 <x:Arguments>
@@ -30,7 +31,7 @@
             </Color>
 
             <!--No Platform Specific Stuff-->
-            <OnPlatform x:Key="BackgroundColor" x:TypeArguments="Color">
+            <OnPlatform x:Key="BackgroundColour" x:TypeArguments="Color">
                 <On Platform="Android" Value="Yellow"/>
                 <On Platform="UWP, WPF" Value="Pink"/>
             </OnPlatform>
@@ -50,8 +51,15 @@
             <Label Text="Xamarin.Forms - Resource dictionaries - Static Resources"
                 HorizontalOptions="CenterAndExpand" VerticalOptions="Start" />
 
-            <Button Text=" Carpe diem " HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BorderWidth="3" TextColor="Yellow"
-                    FontSize="Large">
+            <Button Text=" Carpe diem " VerticalOptions="CenterAndExpand" BorderWidth="3" FontSize="Large">
+                <!-- Long Winded Wouldn't you say and a red line too boot! -->
+                <Button.HorizontalOptions>
+                    <StaticResourceExtension Key="HrzOptCnt" />
+                </Button.HorizontalOptions>
+                <Button.TextColor>
+                    <StaticResourceExtension Key="ClrWht" />
+                </Button.TextColor>
+
                 <Button.BackgroundColor>
                     <OnPlatform x:TypeArguments="Color">
                         <On Platform="Android" Value="#404040" />
@@ -66,8 +74,10 @@
                 </Button.BorderColor>
             </Button>
 
-            <Button Text=" Sapere aude " HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BorderWidth="3" TextColor="Yellow"
-                    FontSize="Large">
+            <!-- A better way that button one -->
+            <Button Text=" Sapere aude "  VerticalOptions="CenterAndExpand" BorderWidth="3" FontSize="Large"
+                    HorizontalOptions="{StaticResource Key=HrzOptCnt}" TextColor="{StaticResource Key=ClrRed}"
+                    >
                 <Button.BackgroundColor>
                     <OnPlatform x:TypeArguments="Color">
                         <On Platform="Android" Value="#404040" />
@@ -81,15 +91,11 @@
                     </OnPlatform>
                 </Button.BorderColor>
             </Button>
-
-            <Button Text=" Discere faciendo " HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BorderWidth="3" TextColor="Yellow"
-                    FontSize="Large">
-                <Button.BackgroundColor>
-                    <OnPlatform x:TypeArguments="Color">
-                        <On Platform="Android" Value="#404040" />
-                        <On Platform="UWP, WPF" Value="#404040" />
-                    </OnPlatform>
-                </Button.BackgroundColor>
+            
+            <!-- And even better way that button one -->
+            <Button Text=" Discere faciendo " VerticalOptions="CenterAndExpand" BorderWidth="3" FontSize="Large"
+                    HorizontalOptions="{StaticResource  HrzOptCnt}" TextColor="{StaticResource ClrBlu}"
+                    BackgroundColor="{StaticResource BackgroundColour}">
                 <Button.BorderColor>
                     <OnPlatform x:TypeArguments="Color">
                         <On Platform="Android" Value="White" />
