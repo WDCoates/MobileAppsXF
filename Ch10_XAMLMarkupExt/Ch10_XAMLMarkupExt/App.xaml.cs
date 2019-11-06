@@ -11,6 +11,10 @@ namespace Ch10_XAMLMarkupExt
         {
             InitializeComponent();
 
+            Resources = new ResourceDictionary();
+            Resources.Add("borderWidth", 5.0d);
+            Resources.Add("brdRad", 10);
+
             MainPage = new
                     //MainPage()
                     //S2_SharedStatics()

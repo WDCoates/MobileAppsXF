@@ -39,9 +39,9 @@
                 HorizontalOptions="CenterAndExpand" VerticalOptions="Start" 
             />
 
-            <Button Text=" Carpe diem " BorderWidth="3" FontSize="Large"
+            <Button Text=" Carpe diem " FontSize="Large"
                     BackgroundColor="{StaticResource BackgroundColour}" VerticalOptions="{StaticResource VrtOptCntExp}"
-                    TextColor="{StaticResource txtClr}">
+                    TextColor="{StaticResource txtClr}" BorderWidth="{StaticResource borderWidth}" BorderRadius="{StaticResource brdRad}">
                 <Button.BorderColor>
                     <OnPlatform x:TypeArguments="Color">
                         <On Platform="Android" Value="White" />
