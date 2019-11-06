@@ -15,7 +15,8 @@ namespace Ch10_XAMLMarkupExt
                     //MainPage()
                     //S2_SharedStatics()
                     //S3_StaticResource()
-                    S4_ResourceSharing()
+                    //S4_ResourceSharing()
+                    S5_ResourceTree()
                 ;
         }
 
