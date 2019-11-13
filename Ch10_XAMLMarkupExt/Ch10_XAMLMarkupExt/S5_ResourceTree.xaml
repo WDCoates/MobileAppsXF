@@ -62,7 +62,7 @@
                 <Label Text="Label 1 of 2" HorizontalOptions="{StaticResource HrzOptCnt}" TextColor="{StaticResource txtClr}" FontSize="{StaticResource fontSize}"/>
 
 
-                <Button Text=" Sapere aude "  VerticalOptions="CenterAndExpand" BorderWidth="{StaticResource fatBorder}" FontSize="Large" 
+                <Button Text=" Sapere aude "  VerticalOptions="CenterAndExpand" BorderWidth="{StaticResource FatBorder}" FontSize="Large" 
                         BorderColor="{StaticResource FatBorderClr}"
                         HorizontalOptions="{StaticResource Key=HrzOptCnt}" TextColor="{StaticResource Key=ClrRed}" 
                         BackgroundColor="{StaticResource BackgroundColour}"

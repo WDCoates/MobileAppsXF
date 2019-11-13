@@ -1,10 +1,10 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Ch10_XAMLMarkupExt
 {
+    // ReSharper disable once RedundantExtendsListEntry
     public partial class App : Application
     {
         public App()
@@ -20,7 +20,8 @@ namespace Ch10_XAMLMarkupExt
                     //S2_SharedStatics()
                     //S3_StaticResource()
                     //S4_ResourceSharing()
-                    S5_ResourceTree()
+                    //S5_ResourceTree()
+                    S6_DynamicResource()
                 ;
         }
 
