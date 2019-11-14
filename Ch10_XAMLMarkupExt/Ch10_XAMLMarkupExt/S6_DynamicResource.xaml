@@ -37,6 +37,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
+            <Label BindingContext="{DynamicResource curDateTime}"   Text="{Binding Path=curDateTime, StringFormat='This is no fun {0: yy/MM/dd hh:mm}!'}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
