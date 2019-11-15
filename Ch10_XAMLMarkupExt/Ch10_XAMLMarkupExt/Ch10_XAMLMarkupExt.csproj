@@ -34,6 +34,9 @@
     <Compile Update="S5_ResourceTree.xaml.cs">
       <DependentUpon>S5_ResourceTree.xaml</DependentUpon>
     </Compile>
+    <Compile Update="S7_LesserUsedMarkupExt.xaml.cs">
+      <DependentUpon>S7_LesserUsedMarkupExt.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -47,6 +50,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="S6_DynamicResource.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="S7_LesserUsedMarkupExt.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

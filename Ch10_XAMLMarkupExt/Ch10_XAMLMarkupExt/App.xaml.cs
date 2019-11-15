@@ -21,7 +21,8 @@ namespace Ch10_XAMLMarkupExt
                     //S3_StaticResource()
                     //S4_ResourceSharing()
                     //S5_ResourceTree()
-                    S6_DynamicResource()
+                    //S6_DynamicResource()
+                    S7_LesserUsedMarkupExt()
                 ;
         }
 
