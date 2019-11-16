@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch10_XAMLMarkupExt.S5_ResourceTree">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android" Value="0, 5, 0, 0" />
+            <On Platform="UWP, WPF" Value="0, 15, 0, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.Resources>
+        <!--The ResourceTree also needs to be explicitly instantiated-->
+        <ResourceDictionary>
+            <LayoutOptions x:Key="HrzOptCnt">Center</LayoutOptions>
+            <LayoutOptions x:Key="VrtOptCntExp" Alignment="Center" Expands="True"/>
+
+            <OnPlatform x:Key="BackgroundColour" x:TypeArguments="Color">
+                <On Platform="Android" Value="Yellow"/>
+                <On Platform="UWP, WPF" Value="Pink"/>
+            </OnPlatform>
+
+            <OnPlatform x:Key="txtClr" x:TypeArguments="Color">
+                <On Platform="Android" Value="Black"/>
+                <On Platform="UWP, WPF" Value="Green"/>
+            </OnPlatform>
+            
+            <Color x:Key="ClrRed">Red</Color>
+            <Color x:Key="ClrWht">#ffffff</Color>
+            <Color x:Key="ClrBlu">blue</Color>
+            
+            <x:Double x:Key="fontSize">Small</x:Double>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Xamarin.Forms - Resource dictionaries - Static Resources"
+                HorizontalOptions="CenterAndExpand" VerticalOptions="Start" 
+            />
+
+            <Button Text=" Carpe diem " FontSize="Large"
+                    BackgroundColor="{StaticResource BackgroundColour}" VerticalOptions="{StaticResource VrtOptCntExp}"
+                    TextColor="{StaticResource txtClr}" BorderWidth="{StaticResource borderWidth}" BorderRadius="{StaticResource brdRad}">
+                <Button.BorderColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="White" />
+                        <On Platform="UWP, WPF" Value="Yellow" />
+                    </OnPlatform>
+                </Button.BorderColor>
+            </Button>
+
+            <StackLayout>
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Color x:Key="txtClr">Default</Color>
+                        <x:Double x:Key="fontSize">Large</x:Double>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+
+
+                <Label Text="Label 1 of 2" HorizontalOptions="{StaticResource HrzOptCnt}" TextColor="{StaticResource txtClr}" FontSize="{StaticResource fontSize}"/>
+
+
+                <Button Text=" Sapere aude "  VerticalOptions="CenterAndExpand" BorderWidth="{StaticResource FatBorder}" FontSize="Large" 
+                        BorderColor="{StaticResource FatBorderClr}"
+                        HorizontalOptions="{StaticResource Key=HrzOptCnt}" TextColor="{StaticResource Key=ClrRed}" 
+                        BackgroundColor="{StaticResource BackgroundColour}"
+                    >
+                </Button>
+            </StackLayout>
+
+
+            <Label Text="Label 2 of 2 - Back to the Page Resources" HorizontalOptions="{StaticResource HrzOptCnt}" TextColor="{StaticResource txtClr}"
+                   FontSize="{StaticResource fontSize}"/>
+
+
+
+            <Button Text=" Discere faciendo " VerticalOptions="CenterAndExpand" BorderWidth="3" FontSize="Large"
+                    HorizontalOptions="{StaticResource  HrzOptCnt}" 
+                    BackgroundColor="{StaticResource BackgroundColour}">
+            </Button>
+
+            <Label Text="Label 2 of 2 - this is Small!" HorizontalOptions="{StaticResource HrzOptCnt}" TextColor="{StaticResource txtClr}"
+                   FontSize="Small"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

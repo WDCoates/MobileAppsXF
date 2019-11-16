@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch10_XAMLMarkupExt.S6_DynamicResource">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="curDateTime">No DatTime yet!</x:String>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Static and Dynamic Resources" HorizontalOptions="Center" VerticalOptions="{StaticResource AppVrtOptCntExp}"></Label>
+
+            <Label Text="{StaticResource curDateTime}" HorizontalOptions="Center" VerticalOptions="{StaticResource AppVrtOptCntExp}"></Label>
+
+            <Label Text="{DynamicResource curDateTime}" HorizontalOptions="Center" VerticalOptions="{StaticResource AppVrtOptCntExp}"></Label>
+
+            <Label Text="StaticResource on Span.Text:" HorizontalOptions="Center" VerticalOptions="{StaticResource AppVrtOptCntExp}"></Label>
+
+            <Label VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{StaticResource curDateTime}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+
+            <Label Text="DynamicResource on Span.Text:" HorizontalOptions="Center" VerticalOptions="{StaticResource AppVrtOptCntExp}"></Label>
+
+            <Label VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{DynamicResource curDateTime}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label BindingContext="{DynamicResource curDateTime}"   Text="{Binding Path=curDateTime, StringFormat='This is no fun {0: yy/MM/dd hh:mm}!'}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

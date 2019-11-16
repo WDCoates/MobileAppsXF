@@ -10,7 +10,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Aest.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="Aest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Windows.Foundation.UniversalApiContract">
+      <HintPath>C:\Program Files (x86)\Windows Kits\10\References\10.0.16299.0\Windows.Foundation.UniversalApiContract\5.0.0.0\Windows.Foundation.UniversalApiContract.winmd</HintPath>
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+    <Reference Include="Xamarin.NS.Toolkit">
+      <HintPath>..\..\..\Xamarin.NS.Toolkit\Xamarin.NS.Toolkit\Xamarin.NS.Toolkit\bin\Release\netstandard2.0\Xamarin.NS.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="S5_ResourceTree.xaml.cs">
+      <DependentUpon>S5_ResourceTree.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="S7_LesserUsedMarkupExt.xaml.cs">
+      <DependentUpon>S7_LesserUsedMarkupExt.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +47,15 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="S3_StaticResource.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="S4_ResourceSharing.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="S6_DynamicResource.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="S7_LesserUsedMarkupExt.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

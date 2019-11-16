@@ -3,6 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ch10_XAMLMarkupExt.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <LayoutOptions x:Key="AppVrtOptCntExp" Alignment="Center" Expands="True"/>
 
+            <x:Double x:Key="FatBorder">5.0</x:Double>
+            <OnPlatform x:TypeArguments="Color" x:Key="FatBorderClr">
+                <On Platform="Android" Value="Yellow"/>
+                <On Platform="UWP, WPF" Value="Green"/>
+            </OnPlatform>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="clr-namespace:Xamarin.NS.Toolkit;assembly=Xamarin.NS.Toolkit"
+             x:Class="Ch10_XAMLMarkupExt.S7_LesserUsedMarkupExt">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android" Value="0, 5, 0, 0" />
+            <On Platform="UWP, WPF" Value="0, 15, 0, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="anArray" Type="{x:Type x:String}">
+                <x:String>Un</x:String>
+                <x:String>Deux</x:String>
+                <x:String>Trois</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Lesser-User Markup Extensions!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+            <!--<SomeElement SomeProperty="{x:Null}" />-->
+
+            <!--<SomeElementType TypeProperty="{x:Type Color}" />-->
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
