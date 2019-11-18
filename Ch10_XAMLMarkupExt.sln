@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch10_XAMLMarkupExt.Android"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch10_XAMLMarkupExt.UWP", "Ch10_XAMLMarkupExt\Ch10_XAMLMarkupExt.UWP\Ch10_XAMLMarkupExt.UWP.csproj", "{C10EFFA7-9EF5-49CB-A61D-6A0EF637DB0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch10_XAMLMarkupExt", "Ch10_XAMLMarkupExt\Ch10_XAMLMarkupExt\Ch10_XAMLMarkupExt.csproj", "{DC8A0361-F267-47B0-ADAB-5F11695BA979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch10_XAMLMarkupExt", "Ch10_XAMLMarkupExt\Ch10_XAMLMarkupExt\Ch10_XAMLMarkupExt.csproj", "{DC8A0361-F267-47B0-ADAB-5F11695BA979}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

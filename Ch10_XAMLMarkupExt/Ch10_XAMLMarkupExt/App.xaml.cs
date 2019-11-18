@@ -9,6 +9,8 @@ namespace Ch10_XAMLMarkupExt
     {
         public App()
         {
+            Xamarin.NS.Toolkit.Toolkit.Init();
+
             InitializeComponent();
 
             //Resources = new ResourceDictionary();     //This needs to be commented out if using the App.xaml file to instantiate the Resource object
