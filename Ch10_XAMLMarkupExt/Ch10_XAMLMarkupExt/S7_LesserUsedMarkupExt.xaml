@@ -28,6 +28,12 @@
 
             <!--<SomeElementType TypeProperty="{x:Type Color}" />-->
 
+            <Label Text="Below is a BoxView using a class from external Toolkit:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+            <BoxView Color="{toolkit:HslColor H=0.67, S=1, L=0.4}"/>
+
+            <BoxView Color="{toolkit:HslColor PureBlack()}"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
