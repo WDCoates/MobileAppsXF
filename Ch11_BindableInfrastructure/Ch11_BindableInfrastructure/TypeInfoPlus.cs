@@ -15,6 +15,7 @@ namespace Ch11_BindableInfrastructure
 
         public TypeInfoPlus(Type type, bool isXamarinForm)
         {
+            Type = type;
             IsXamarinForm = isXamarinForm;
             TypeInfo typeInfo = type.GetTypeInfo();
             BaseType = typeInfo.BaseType;
@@ -31,16 +32,16 @@ namespace Ch11_BindableInfrastructure
             }
         }
 
-        public bool IsDerivedDirectlyFrom(Type parType)
+        public bool IsDerivedDirectlyFrom(Type pType)
         {
             if (BaseType != null && _isBaseGenType)
             {
-                if (_baseGenTypeDef == parType)
+                if (_baseGenTypeDef == pType)
                 {
                     return true;
                 }
             }
-            else if (BaseType == parType)
+            else if (BaseType == pType)
             {
                 return true;
             }
