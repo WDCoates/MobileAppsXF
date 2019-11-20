@@ -13,7 +13,7 @@
         <StackLayout>
             <Label Text="Class Hierarchy!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
             <ScrollView>
-                <StackLayout x:Name="sLayout2" Spacing="0"/>
+                <StackLayout x:Name="SLayout2" Spacing="0"/>
             </ScrollView>
         </StackLayout>
     </ContentPage.Content>

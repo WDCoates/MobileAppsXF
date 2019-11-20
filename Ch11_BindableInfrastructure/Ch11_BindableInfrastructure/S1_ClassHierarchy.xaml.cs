@@ -51,7 +51,7 @@ namespace Ch11_BindableInfrastructure
             } while (index < clsList.Count);
 
             // Sort list!
-            clsList.Sort((t1, t2) => String.CompareOrdinal(t1?.Type.Name, t2.Type.Name ?? ""));
+            clsList.Sort((t1, t2) => String.CompareOrdinal(t1.Type.Name, t2.Type.Name));
 
             // Start the display with System.Object...
             var rClass = new ClassAndSubclass(typeof(Object), false);
@@ -123,7 +123,7 @@ namespace Ch11_BindableInfrastructure
                 TextColor = pClass.Type.GetTypeInfo().IsAbstract ? Color.Accent : Color.Default
             };
 
-            sLayout2.Children.Add(label);
+            SLayout2.Children.Add(label);
 
             // Now display nested types.
             foreach (var sClass in pClass.Subclass)
