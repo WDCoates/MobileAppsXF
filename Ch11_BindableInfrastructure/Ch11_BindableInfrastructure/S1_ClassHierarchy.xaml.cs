@@ -93,7 +93,7 @@ namespace Ch11_BindableInfrastructure
         private void AddItemsTosL2(ClassAndSubclass pClass, int level)
         {
             // If assembly is not Xamarin.Forms, display full name.
-            var name = pClass.IsXamarinForm ? pClass.Type.Name : pClass.Type.FullName;
+            var name = pClass.IsXamarinForm ? pClass.Type.Name : pClass.Type.FullName + " *";
 
             var tInfo = pClass.Type.GetTypeInfo();
 
@@ -101,7 +101,7 @@ namespace Ch11_BindableInfrastructure
             if (tInfo.IsGenericType)
             {
                 Type[] param = tInfo.GenericTypeParameters;
-                name = name?.Substring(0, name.Length - 2);
+                name = name.Substring(0, name.Length - 2);
 
                 name += '<';
 
