@@ -10,9 +10,10 @@ namespace Ch11_BindableInfrastructure
         {
             InitializeComponent();
 
-            MainPage = new 
+            MainPage = new
                 //MainPage()
-                S1_ClassHierarchy()
+                //S1_ClassHierarchy()
+                S2_PropSettings()
                 ;
         }
 
