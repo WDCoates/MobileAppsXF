@@ -41,6 +41,8 @@ namespace Ch11_BindableInfrastructure
             Label label3 = new Label();
             label3.SetValue(Label.TextProperty, label1.GetValue(Label.TextProperty));
 
+            var t = Label.TextProperty; // t = "Text"
+
             Content = new StackLayout
             {
                 Children =
