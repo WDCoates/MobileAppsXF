@@ -14,6 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Xamarin.NS.Toolkit">
+      <HintPath>..\..\..\Xamarin.NS.Toolkit\Xamarin.NS.Toolkit\Xamarin.NS.Toolkit\bin\Release\netstandard2.0\Xamarin.NS.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="S1_ClassHierarchy.xaml.cs">
       <DependentUpon>S1_ClassHierarchy.xaml</DependentUpon>
     </Compile>
@@ -29,5 +35,29 @@
     <EmbeddedResource Update="S3_DynamicVsStatic.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="S4_AltLabelPointSize.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S1_ClassHierarchy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S2_PropSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S3_DynamicVsStatic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S4_AltLabelPointSize.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>

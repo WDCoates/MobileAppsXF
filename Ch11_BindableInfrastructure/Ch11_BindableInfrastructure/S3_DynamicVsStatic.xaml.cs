@@ -49,6 +49,7 @@ namespace Ch11_BindableInfrastructure
                 }
             };
 
+            //
             // Create the final label with dynamic resource.
             Label label = new Label
             {

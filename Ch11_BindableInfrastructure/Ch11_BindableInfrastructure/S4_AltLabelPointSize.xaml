@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:tKit="clr-namespace:Xamarin.NS.Toolkit;assembly=Xamarin.NS.Toolkit"
+             x:Class="Ch11_BindableInfrastructure.S4_AltLabelPointSize">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android" Value="0, 5, 0, 0" />
+            <On Platform="UWP, WPF" Value="0, 15, 0, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Using 'AltLabel', a binable class from the ToolKit!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <tKit:AltLabel Text="Text of 4 points." PointSize ="4"/>
+            <tKit:AltLabel Text="Text of 5 points." PointSize ="5"/>
+            <tKit:AltLabel Text="Text of 6 points." PointSize ="6"/>
+            <tKit:AltLabel Text="Text of 7 points." PointSize ="7"/>
+            <tKit:AltLabel Text="Text of 8 points." PointSize="8"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

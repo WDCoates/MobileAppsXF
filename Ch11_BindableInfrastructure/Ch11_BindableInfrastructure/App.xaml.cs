@@ -13,8 +13,9 @@ namespace Ch11_BindableInfrastructure
             MainPage = new
                 //MainPage()
                 //S1_ClassHierarchy()
-                // S2_PropSettings()
-                S3_DynamicVsStatic()
+                //S2_PropSettings()
+                //S3_DynamicVsStatic()
+                S4_AltLabelPointSize()
                 ;
         }
 
