@@ -15,7 +15,8 @@ namespace Ch11_BindableInfrastructure
                 //S1_ClassHierarchy()
                 //S2_PropSettings()
                 //S3_DynamicVsStatic()
-                S4_AltLabelPointSize()
+                //S4_AltLabelPointSize()
+                S5_CountedLabel()
                 ;
         }
 
