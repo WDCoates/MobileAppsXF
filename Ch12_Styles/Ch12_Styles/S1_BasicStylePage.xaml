@@ -4,6 +4,15 @@
              x:Class="Ch12_Styles.S1_BasicStylePage">
     <ContentPage.Resources>
         <ResourceDictionary>
+            <Color x:Key="ButTextColour" x:FactoryMethod="FromHsla">
+                <x:Arguments>
+                    <x:Double>0.50</x:Double>
+                    <x:Double>1</x:Double>
+                    <x:Double>0.85</x:Double>
+                    <x:Double>1</x:Double>
+                </x:Arguments>
+            </Color>
+
             <Style x:Key="ButtonStyle" TargetType="Button">
                 <Setter Property="HorizontalOptions" Value="Center"/>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
@@ -26,6 +35,46 @@
                         </OnPlatform>
                     </Setter.Value>
                 </Setter>
+
+                <Setter Property="TextColor">
+                    <Setter.Value>
+                        <Color x:FactoryMethod="FromHsla">
+                            <x:Arguments>
+                                <x:Double>0.83</x:Double>
+                                <x:Double>1</x:Double>
+                                <x:Double>0.75</x:Double>
+                                <x:Double>1</x:Double>
+                            </x:Arguments>
+                        </Color>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="ButtonStyle2" TargetType="Button">
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            <Setter Property="BorderWidth" Value="3"/>
+            <Setter Property="FontSize" Value="Large"/>
+
+            <Setter Property="BackgroundColor">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="White"/>
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="BorderColor">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="Red"/>
+                        <On Platform="UWP, WPF" Value="BLue"/>
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+
+                <Setter Property="TextColor" Value="{StaticResource ButTextColour}"/>
+
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -36,7 +85,7 @@
                 HorizontalOptions="CenterAndExpand" />
             <Button Text="Setting The Style" Style="{StaticResource ButtonStyle}" />
             <Button Text="Same Style" Style="{StaticResource ButtonStyle}" />
-            <Button Text="And Third button with the very same Style" Style="{StaticResource ButtonStyle}" />
+            <Button Text="And Third button with the very same Style" Style="{StaticResource ButtonStyle2}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
