@@ -20,6 +20,11 @@
                                ></tKit:CountedLabel>
 
             <Label x:Name="WordCountLabel" Text="????" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"></Label>
+
+            <tKit:CountedLabel x:Name="FramePlus" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"
+                               Text ="No Fing Way!"
+            ></tKit:CountedLabel>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
