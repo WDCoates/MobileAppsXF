@@ -20,25 +20,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="S1_ClassHierarchy.xaml.cs">
-      <DependentUpon>S1_ClassHierarchy.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="S1_ClassHierarchy.xaml">
+    <EmbeddedResource Update="S1_BasicStylePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="S2_PropSettings.xaml">
+    <EmbeddedResource Update="S2_StylesInCode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="S3_DynamicVsStatic.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="S4_AltLabelPointSize.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="S5_CountedLabel.xaml">
+    <EmbeddedResource Update="S3_StyleInheritance.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -50,16 +38,13 @@
     <None Update="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Update="S1_ClassHierarchy.xaml">
+    <None Update="S1_BasicStylePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Update="S2_PropSettings.xaml">
+    <None Update="S2_StylesInCode.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Update="S3_DynamicVsStatic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="S4_AltLabelPointSize.xaml">
+    <None Update="S3_StyleInheritance.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>

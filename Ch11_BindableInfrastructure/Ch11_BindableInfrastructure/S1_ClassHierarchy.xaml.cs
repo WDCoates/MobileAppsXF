@@ -46,10 +46,12 @@ namespace Ch11_BindableInfrastructure
                     }
                 }
 
+                index++;
+
             } while (index < clsList.Count);
 
             // Sort list!
-            clsList.Sort((t1, t2) => string.CompareOrdinal(t1.Type.Name, t2.Type.Name));
+            clsList.Sort((t1, t2) => String.CompareOrdinal(t1.Type.Name, t2.Type.Name));
 
             // Start the display with System.Object...
             var rClass = new ClassAndSubclass(typeof(Object), false);
@@ -88,9 +90,47 @@ namespace Ch11_BindableInfrastructure
             }
         }
 
-        private void AddItemsTosL2(ClassAndSubclass rClass, int i)
+        private void AddItemsTosL2(ClassAndSubclass pClass, int level)
         {
-            throw new NotImplementedException();
+            // If assembly is not Xamarin.Forms, display full name.
+            var name = pClass.IsXamarinForm ? pClass.Type.Name : pClass.Type.FullName + " *";
+
+            var tInfo = pClass.Type.GetTypeInfo();
+
+            // If generic, display angle brackets and parameters
+            if (tInfo.IsGenericType)
+            {
+                Type[] param = tInfo.GenericTypeParameters;
+                name = name.Substring(0, name.Length - 2);
+
+                name += '<';
+
+                for (var i = 0; i < param.Length; i++)
+                {
+                    name += param[i].Name;
+                    if (i < param.Length - 1)
+                    {
+                        name += ", ";
+                    }
+                }
+                name += '>';
+
+            }
+
+            Label label = new Label
+            {
+                Text = $"{new string(' ', 4 * level)}{name}",
+                TextColor = pClass.Type.GetTypeInfo().IsAbstract ? Color.Accent : Color.Default
+            };
+
+            SLayout2.Children.Add(label);
+
+            // Now display nested types.
+            foreach (var sClass in pClass.Subclass)
+            {
+                AddItemsTosL2(sClass, level + 1);
+            }
+
         }
 
 

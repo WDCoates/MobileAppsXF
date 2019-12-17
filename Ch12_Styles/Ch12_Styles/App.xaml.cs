@@ -1,8 +1,9 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace Ch11_BindableInfrastructure
+namespace Ch12_Styles
 {
     public partial class App : Application
     {
@@ -12,11 +13,9 @@ namespace Ch11_BindableInfrastructure
 
             MainPage = new
                 //MainPage()
-                //S1_ClassHierarchy()
-                //S2_PropSettings()
-                //S3_DynamicVsStatic()
-                //S4_AltLabelPointSize()
-                S5_CountedLabel()
+                //S1_BasicStylePage ()
+                //S2_StylesInCode()
+                S3_StyleInheritance()
                 ;
         }
 
