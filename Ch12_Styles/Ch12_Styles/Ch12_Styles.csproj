@@ -14,10 +14,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Xamarin.NS.Toolkit">
+      <HintPath>..\..\..\Xamarin.NS.Toolkit\Xamarin.NS.Toolkit\Xamarin.NS.Toolkit\bin\Release\netstandard2.0\Xamarin.NS.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="S1_BasicStylePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="S2_StylesInCode.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="S3_StyleInheritance.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -33,6 +42,9 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="S2_StylesInCode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S3_StyleInheritance.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>

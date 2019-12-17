@@ -14,7 +14,8 @@ namespace Ch12_Styles
             MainPage = new
                 //MainPage()
                 //S1_BasicStylePage ()
-                S2_StylesInCode()
+                //S2_StylesInCode()
+                S3_StyleInheritance()
                 ;
         }
 

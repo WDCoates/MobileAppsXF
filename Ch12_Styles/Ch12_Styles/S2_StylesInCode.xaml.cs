@@ -19,6 +19,7 @@ namespace Ch12_Styles
                         {
                             new Setter
                             {
+                                //Property = Button.HorizontalOptionsProperty, Value = LayoutOptions.Center // One could use Button but View is the base type.
                                 Property = View.HorizontalOptionsProperty, Value = LayoutOptions.Center
                             },
                             new Setter
