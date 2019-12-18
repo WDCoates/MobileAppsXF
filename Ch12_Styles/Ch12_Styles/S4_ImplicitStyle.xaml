@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch12_Styles.S4_ImplicitStyle">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="BorderColor" Value="Blue"/>
+                <Setter Property="BorderRadius"  Value="10"/>
+                <Setter Property="BorderWidth" Value="4"/>
+                <Setter Property="BackgroundColor">
+                    <Setter.Value>
+                        <On Platform="Android" x:DataType="Color" Value="Red"/>
+                        <On Platform="WUP" x:DataType="Color"  Value="Yellow"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="ResourceDic entry without a key!"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
