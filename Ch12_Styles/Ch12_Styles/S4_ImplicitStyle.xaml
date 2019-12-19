@@ -12,8 +12,10 @@
                 <Setter Property="BorderWidth" Value="4"/>
                 <Setter Property="BackgroundColor">
                     <Setter.Value>
-                        <On Platform="Android" x:DataType="Color" Value="Red"/>
-                        <On Platform="WUP" x:DataType="Color"  Value="Yellow"/>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="Android" Value="Red"/>
+                            <On Platform="UWP" Value="Green"/>
+                        </OnPlatform> 
                     </Setter.Value>
                 </Setter>
             </Style>
