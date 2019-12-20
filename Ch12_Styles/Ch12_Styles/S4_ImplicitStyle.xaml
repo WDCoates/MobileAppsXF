@@ -14,7 +14,7 @@
                     <Setter.Value>
                         <OnPlatform x:TypeArguments="Color">
                             <On Platform="Android" Value="Red"/>
-                            <On Platform="UWP" Value="Green"/>
+                            <On Platform="iOS, UWP" Value="Green"/>
                         </OnPlatform> 
                     </Setter.Value>
                 </Setter>

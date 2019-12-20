@@ -16,7 +16,8 @@ namespace Ch12_Styles
                 //S1_BasicStylePage ()
                 //S2_StylesInCode()
                 //S3_StyleInheritance()
-                S4_ImplicitStyle()
+                //S4_ImplicitStyle()
+                S5_StyleHierarchy()
                 ;
         }
 
