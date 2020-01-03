@@ -19,7 +19,8 @@ namespace Ch12_Styles
                 //S4_ImplicitStyle()
                 //S5_StyleHierarchy()
                 //S6_DynamicStyles()
-                S7_DynamicStylesInheritance()
+                //S7_DynamicStylesInheritance()
+                S8_DeviceStyleList()
                 ;
         }
 

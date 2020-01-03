@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch12_Styles.S8_DeviceStyleList">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android" Value="0, 10"/>
+            <On Platform="UWP" Value="0,15"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="DevSubtitleStyle" TargetType="Label" BaseResourceKey="SubtitleStyle">
+                <Setter Property="TextColor" Value="Accent"/>
+                <Setter Property="FontAttributes" Value="Italic"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+        <ScrollView>
+            <StackLayout Spacing="20">
+
+                <!-- Device styles set with DynamicResource -->
+                <StackLayout HorizontalOptions="Start">
+                    <Label Text="Device styles set with DynamicResource" />
+                    <BoxView Color="Accent" HeightRequest="3"/>
+                </StackLayout>
+
+                <Label Text="No Style what-so-ever" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
