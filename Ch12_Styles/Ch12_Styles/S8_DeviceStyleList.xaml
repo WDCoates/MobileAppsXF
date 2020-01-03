@@ -17,14 +17,12 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
         <ScrollView>
             <StackLayout Spacing="20">
+                <Label Text="Welcome to Xamarin.Forms!"
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" />
+
 
                 <!-- Device styles set with DynamicResource -->
                 <StackLayout HorizontalOptions="Start">
@@ -36,5 +34,5 @@
 
             </StackLayout>
         </ScrollView>
-    </ContentPage.Content>
+    
 </ContentPage>
