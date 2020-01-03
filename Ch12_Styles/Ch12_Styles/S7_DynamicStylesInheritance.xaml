@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch12_Styles.S7_DynamicStylesInheritance">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android" Value="0, 15"/>
+            <On Platform="iOS, UWP, WPF" Value="0, 20"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="Large"/>
+            </Style>
+
+            <Style x:Key="ButtonStyle1" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="TextColor" Value="Red"/>
+            </Style>
+
+            <Style x:Key="ButtonStyle2" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+                <Setter Property="TextColor" Value="Yellow"/>
+                <Setter Property="FontAttributes" Value="Italic"/>
+            </Style>
+
+            <Style x:Key="ButtonStyle3" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                <Setter Property="HorizontalOptions" Value="End"/>
+                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+                <Setter Property="TextColor" Value="Green"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <!-- New style definition -->
+            <Style x:Key="DhButtonStyle" TargetType="Button" BaseResourceKey="ButtonStyle">
+                <Setter Property="BackgroundColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="iOS" Value="#C0C0C0"/>
+                            <On Platform="Android" Value="#404040"/>
+                            <On Platform="UWP" Value="Gray"/>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="BorderColor" Value="Blue"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Using Dynamic Styles With Inheritance!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+            <Button Text=" Switch to Style #1 " Style="{StaticResource DhButtonStyle}" Clicked="OnButton1Clicked"/>
+            <Button Text=" Switch to Style #2 " Style="{StaticResource DhButtonStyle}" Clicked="OnButton2Clicked"/>
+            <Button Text=" Switch to Style #3 " Style="{StaticResource DhButtonStyle}" Clicked="OnButton3Clicked"/>
+
+            <Button Text=" Reset " Style="{DynamicResource ButtonStyle}" Clicked="OnResetButtonClicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

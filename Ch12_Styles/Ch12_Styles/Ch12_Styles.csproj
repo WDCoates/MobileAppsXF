@@ -38,6 +38,9 @@
     <EmbeddedResource Update="S6_DynamicStyles.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="S7_DynamicStylesInheritance.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +57,18 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="S3_StyleInheritance.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S4_ImplicitStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S5_StyleHierarchy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S6_DynamicStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S7_DynamicStylesInheritance.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>

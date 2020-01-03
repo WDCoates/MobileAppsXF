@@ -18,7 +18,8 @@ namespace Ch12_Styles
                 //S3_StyleInheritance()
                 //S4_ImplicitStyle()
                 //S5_StyleHierarchy()
-                S6_DynamicStyles()
+                //S6_DynamicStyles()
+                S7_DynamicStylesInheritance()
                 ;
         }
 
