@@ -8,6 +8,7 @@
             <On Platform="UWP" Value="0,15"/>
         </OnPlatform>
     </ContentPage.Padding>
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="DevSubtitleStyle" TargetType="Label" BaseResourceKey="SubtitleStyle">
@@ -17,22 +18,43 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-        <ScrollView>
-            <StackLayout Spacing="20">
-                <Label Text="Welcome to Xamarin.Forms!"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand" />
+    <ScrollView>
+        <StackLayout Spacing="20">
+            <Label Text="Welcome to Xamarin.Forms!" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
 
-
-                <!-- Device styles set with DynamicResource -->
+            <!-- Device styles set with DynamicResource -->
+            <StackLayout>
                 <StackLayout HorizontalOptions="Start">
                     <Label Text="Device styles set with DynamicResource" />
-                    <BoxView Color="Accent" HeightRequest="3"/>
+                    <BoxView Color="Accent" HeightRequest="1"/>
                 </StackLayout>
 
                 <Label Text="No Style what-so-ever" />
 
+                <Label Text="Body Style" Style="{DynamicResource BodyStyle}"/>
+
+                <Label Text="Title Style" Style="{DynamicResource TitleStyle}"/>
+
+                <Label Text="Subtitle Style" Style="{DynamicResource SubtitleStyle}"/>
+
+                <!-- Uses styles derived from device style. -->
+                <Label Text="New Subtitle Style" Style="{StaticResource DevSubtitleStyle}"/>
+
+                <Label Text="Caption Style" Style="{DynamicResource CaptionStyle}"/>
+
+                <Label Text="List Item Text Style" Style="{DynamicResource ListItemTextStyle}"/>
+
+                <Label Text="List Item Detail Text Style" Style="{DynamicResource ListItemDetailTextStyle}"/>
             </StackLayout>
-        </ScrollView>
-    
+
+            <!-- Device styles set in code! -->
+            <StackLayout x:Name="CodeLabelStack">
+                <StackLayout HorizontalOptions="Start">
+                    <Label Text="Device styles set in code" />
+                    <BoxView Color="Accent" HeightRequest="1"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
 </ContentPage>
