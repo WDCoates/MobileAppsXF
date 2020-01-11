@@ -33,8 +33,18 @@ namespace Ch24_ModelessAndModal
 
             gotoModalButton.Clicked += async (sender, args) => { await Navigation.PushModalAsync(new ModalPage(), true).ConfigureAwait(true); };
 
+            Button gotoPage1Button = new Button
+            {
+                Text = "Go to Modal Page 1",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.CenterAndExpand
+            };
+
+            gotoPage1Button.Clicked += async (sender, args) => { await Navigation.PushAsync(new Page1(), true).ConfigureAwait(true); };
+
             Stack_1.Children.Add(gotoModelessButton);
             Stack_1.Children.Add(gotoModalButton);
+            Stack_1.Children.Add(gotoPage1Button);
         }
     }
 

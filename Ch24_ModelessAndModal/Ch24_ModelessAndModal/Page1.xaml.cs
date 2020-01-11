@@ -27,7 +27,7 @@ namespace Ch24_ModelessAndModal
 
             goBackButton.Clicked += async (s, a) => { await Navigation.PopAsync().ConfigureAwait(true); };
 
-            Content.;
+            S1.Children.Add(goBackButton);
         }
 	}
 }
