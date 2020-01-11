@@ -15,6 +15,19 @@ namespace Ch24_ModelessAndModal
 		public Page1 ()
 		{
 			InitializeComponent ();
-		}
+
+            Title = "Page 1";
+
+            Button goBackButton = new Button
+            {
+                Text = "Back to Main",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            goBackButton.Clicked += async (s, a) => { await Navigation.PopAsync().ConfigureAwait(true); };
+
+            Content.;
+        }
 	}
 }
