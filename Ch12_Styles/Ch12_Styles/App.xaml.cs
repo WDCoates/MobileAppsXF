@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -15,7 +14,12 @@ namespace Ch12_Styles
                 //MainPage()
                 //S1_BasicStylePage ()
                 //S2_StylesInCode()
-                S3_StyleInheritance()
+                //S3_StyleInheritance()
+                //S4_ImplicitStyle()
+                //S5_StyleHierarchy()
+                //S6_DynamicStyles()
+                //S7_DynamicStylesInheritance()
+                S8_DeviceStyleList()
                 ;
         }
 

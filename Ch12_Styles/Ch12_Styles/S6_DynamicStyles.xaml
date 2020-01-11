@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch12_Styles.S6_DynamicStyles">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android" Value="10, 0"/>
+            <On Platform="iOS, UWP, WPF" Value="20, 20"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="Large"/>
+            </Style>
+
+            <Style x:Key="ButtonStyle1" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="TextColor" Value="Red"/>
+             </Style>
+
+            <Style x:Key="ButtonStyle2" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+                <Setter Property="TextColor" Value="Yellow"/>
+                <Setter Property="FontAttributes" Value="Italic"/>
+            </Style>
+
+            <Style x:Key="ButtonStyle3" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                <Setter Property="HorizontalOptions" Value="End"/>
+                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+                <Setter Property="TextColor" Value="Green"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Using Dynamic Styles!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Text=" Switch to Style #1 " Style="{DynamicResource ButtonStyle}" Clicked="OnButton1Clicked"/>
+            <Button Text=" Switch to Style #2 " Style="{DynamicResource ButtonStyle}" Clicked="OnButton2Clicked"/>
+            <Button Text=" Switch to Style #3 " Style="{DynamicResource ButtonStyle}" Clicked="OnButton3Clicked"/>
+            
+            <Button Text=" Reset " Style="{DynamicResource ButtonStyle}" Clicked="OnResetButtonClicked"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
