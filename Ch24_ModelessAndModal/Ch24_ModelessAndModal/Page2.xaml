@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ch24_ModelessAndModal.Page1"
-             NavigationPage.HasBackButton="False">
+             x:Class="Ch24_ModelessAndModal.Page2"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout x:Name="S1">
-            <Label Text="Page 1 with no Navigation Back Button!"
+        <StackLayout x:Name="S2">
+            <Label Text="Page 2 with no Navigation Bar!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

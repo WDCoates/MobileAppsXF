@@ -42,9 +42,20 @@ namespace Ch24_ModelessAndModal
 
             gotoPage1Button.Clicked += async (sender, args) => { await Navigation.PushAsync(new Page1(), true).ConfigureAwait(true); };
 
+
+            Button gotoPage2Button = new Button
+            {
+                Text = "Go to Modeless Page 2 with backing XAML!",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.CenterAndExpand
+            };
+
+            gotoPage2Button.Clicked += async (sender, args) => { await Navigation.PushAsync(new Page2(), true).ConfigureAwait(true); };
+            
             Stack_1.Children.Add(gotoModelessButton);
             Stack_1.Children.Add(gotoModalButton);
             Stack_1.Children.Add(gotoPage1Button);
+            Stack_1.Children.Add(gotoPage2Button);
         }
     }
 
