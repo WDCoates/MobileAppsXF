@@ -35,7 +35,7 @@ namespace Ch24_ModelessAndModal
 
             Button gotoPage1Button = new Button
             {
-                Text = "Go to Modal Page 1",
+                Text = "Go to Modeless Page 1",
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
