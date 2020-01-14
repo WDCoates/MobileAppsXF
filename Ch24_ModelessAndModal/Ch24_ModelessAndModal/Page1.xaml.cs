@@ -12,7 +12,9 @@ namespace Ch24_ModelessAndModal
 
             Title = "Page 1";
 
-            NavigationPage.SetHasBackButton(this, false); //Can also be done through XAML
+            //NavigationPage.SetHasBackButton(this, false); //Can also be done through XAML
+            
+            //NavigationPage.SetTitleIcon()     //Complete when finished chapter 13....
 
             Button goBackButton = new Button
             {

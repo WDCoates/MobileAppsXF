@@ -14,6 +14,7 @@ namespace Ch24_ModelessAndModal
             InitializeComponent();
 
             Title = "Main Page";
+            NavigationPage.SetBackButtonTitle(this, "Backs");   //iOS only....
 
             Button gotoModelessButton = new Button
             {
