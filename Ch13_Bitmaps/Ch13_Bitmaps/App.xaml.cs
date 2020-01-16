@@ -3,7 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace Ch24_ModelessAndModal
+namespace Ch13_Bitmaps
 {
     public partial class App : Application
     {
@@ -11,11 +11,7 @@ namespace Ch24_ModelessAndModal
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage())
-            {
-                BarBackgroundColor = Color.Blue,
-                BarTextColor = Color.Yellow
-            };
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

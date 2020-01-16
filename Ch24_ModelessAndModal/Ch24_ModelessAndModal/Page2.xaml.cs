@@ -4,17 +4,13 @@ using Xamarin.Forms.Xaml;
 namespace Ch24_ModelessAndModal
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Page1 : ContentPage
+	public partial class Page2 : ContentPage
 	{
-		public Page1 ()
+		public Page2 ()
 		{
 			InitializeComponent ();
 
-            Title = "Page 1";
-
-            //NavigationPage.SetHasBackButton(this, false); //Can also be done through XAML
-            
-            //NavigationPage.SetTitleIcon()     //Complete when finished chapter 13....
+            Title = "Page 2";
 
             Button goBackButton = new Button
             {
@@ -25,7 +21,7 @@ namespace Ch24_ModelessAndModal
 
             goBackButton.Clicked += async (s, a) => { await Navigation.PopAsync().ConfigureAwait(true); };
 
-            S1.Children.Add(goBackButton);
+            S2.Children.Add(goBackButton);
         }
 	}
 }
