@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ch13_Bitmaps.S1_PlatformIndependentBitmaps">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout x:Name="S1St1">
             <Label Text="S1 Platform Independent Bitmaps"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
