@@ -25,6 +25,9 @@ namespace Ch13_Bitmaps
             {
                 Navigation.PushAsync(new S3_ResourceBitmapCode());
             };
+
+            //S4_UsingImgResExt()
+            Button4.Clicked += (sender, args) => { Navigation.PushAsync(new S4_UsingImgResExt()); };
         }
     }
 }
