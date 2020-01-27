@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xamlMarkupExt="clr-namespace:Ch13_Bitmaps.XAMLMarkupExt;assembly=Ch13_Bitmaps"
+             x:Class="Ch13_Bitmaps.S4_UsingImgResExt">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Using a XAMLMarkUpExtension OMG!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            
+            <Image Source="{xamlMarkupExt:ImageResource Ch13_Bitmaps.Images.DSC_0285.JPG}"
+                   BackgroundColor="Aqua" SizeChanged="OnImageSizeChanged"/>
+
+            <Label x:Name="bLabel" FontSize="Medium" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

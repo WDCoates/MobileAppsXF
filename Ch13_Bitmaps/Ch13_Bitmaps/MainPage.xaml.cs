@@ -14,6 +14,20 @@ namespace Ch13_Bitmaps
             {
                 Navigation.PushAsync(new S1_PlatformIndependentBitmaps());
             };
+
+            Button2.Clicked += (sender, args) =>
+            {
+                Navigation.PushAsync(new S2_SmallBitmapImageOnly());
+            };
+
+            //S3_ResourceBitmapCode ()
+            Button3.Clicked += (sender, args) =>
+            {
+                Navigation.PushAsync(new S3_ResourceBitmapCode());
+            };
+
+            //S4_UsingImgResExt()
+            Button4.Clicked += (sender, args) => { Navigation.PushAsync(new S4_UsingImgResExt()); };
         }
     }
 }
