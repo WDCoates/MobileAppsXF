@@ -11,7 +11,7 @@
             
             <Image Source="{xamlMarkupExt:ImageResource Ch13_Bitmaps.Images.DSC_0285_256x256.jpg}"
                    BackgroundColor="Aqua" SizeChanged="OnImageSizeChanged"
-                   HorizontalOptions="Center" HeightRequest="250" WidthRequest="200"/>
+                   HorizontalOptions="Center" HeightRequest="1250" WidthRequest="1000"/>
 
             <Label x:Name="BLabel" FontSize="Medium" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
         </StackLayout>
