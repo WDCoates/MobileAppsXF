@@ -9,10 +9,11 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             
-            <Image Source="{xamlMarkupExt:ImageResource Ch13_Bitmaps.Images.DSC_0285.JPG}"
-                   BackgroundColor="Aqua" SizeChanged="OnImageSizeChanged"/>
+            <Image Source="{xamlMarkupExt:ImageResource Ch13_Bitmaps.Images.DSC_0285_256x256.jpg}"
+                   BackgroundColor="Aqua" SizeChanged="OnImageSizeChanged"
+                   HorizontalOptions="Center" HeightRequest="250" WidthRequest="200"/>
 
-            <Label x:Name="bLabel" FontSize="Medium" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+            <Label x:Name="BLabel" FontSize="Medium" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
