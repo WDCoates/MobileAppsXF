@@ -1,17 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ignore="https://galasoft.ch/ignore"
              xmlns:xamlMarkupExt="clr-namespace:Ch13_Bitmaps.XAMLMarkupExt;assembly=Ch13_Bitmaps"
+             mc:Ignorable="ignore"
              x:Class="Ch13_Bitmaps.S4_UsingImgResExt">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Using a XAMLMarkUpExtension OMG!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            
+
             <Image Source="{xamlMarkupExt:ImageResource Ch13_Bitmaps.Images.DSC_0285_256x256.jpg}"
                    BackgroundColor="Aqua" SizeChanged="OnImageSizeChanged"
-                   HorizontalOptions="Center" HeightRequest="1250" WidthRequest="1000"/>
+                   ignore:Comment="This is a comment!"
+                   HeightRequest="100"/>
 
             <Label x:Name="BLabel" FontSize="Medium" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
         </StackLayout>
