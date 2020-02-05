@@ -13,11 +13,13 @@
 
   <ItemGroup>
     <None Remove="Images\DSC_0285.JPG" />
+    <None Remove="Images\DSC_0285_1200x900.jpg" />
     <None Remove="Images\DSC_0285_256x256.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Images\DSC_0285.JPG" />
+    <EmbeddedResource Include="Images\DSC_0285_1200x900.jpg" />
     <EmbeddedResource Include="Images\DSC_0285_256x256.jpg" />
   </ItemGroup>
 
@@ -45,6 +47,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="S4_UsingImgResExt.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="S5_DeviceIndBitmapSize.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
