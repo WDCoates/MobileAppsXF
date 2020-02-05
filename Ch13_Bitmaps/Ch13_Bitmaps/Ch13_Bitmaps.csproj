@@ -48,4 +48,25 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S1_PlatformIndependentBitmaps.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S2_SmallBitmapImageOnly.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S3_ResourceBitmapCode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S4_UsingImgResExt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
 </Project>
