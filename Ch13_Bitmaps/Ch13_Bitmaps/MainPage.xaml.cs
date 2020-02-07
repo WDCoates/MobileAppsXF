@@ -28,7 +28,9 @@ namespace Ch13_Bitmaps
 
             //S5_DeviceIndBitmapSize()
             Button5.Clicked += (sender, args) => { Navigation.PushAsync(new S5_DeviceIndBitmapSize()); };
-            
+
+            //S5_DeviceIndBitmapSize()
+            Button6.Clicked += (sender, args) => { Navigation.PushAsync(new S6_MadStJamesPark()); };
         }
     }
 }

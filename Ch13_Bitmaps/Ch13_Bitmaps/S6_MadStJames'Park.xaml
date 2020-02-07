@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="Ch13_Bitmaps.S6_MadStJamesPark"
+             BackgroundColor="LightBlue">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android, UWP, WPF">0,10,0,5</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10">
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Style x:Key="TitleLabel" TargetType="Label" BaseResourceKey="TitleStyle">
+                            <Setter Property="TextColor" Value="Green" />
+                            <Setter Property="HorizontalTextAlignment" Value="Center" />
+                        </Style>
+
+                        <!-- Implicit style -->
+                        <Style TargetType="Label" BaseResourceKey="BodyStyle">
+                            <Setter Property="TextColor" Value="Yellow"/>
+                            <Setter Property="FontAttributes" Value="Bold"/>
+                        </Style>
+                        <Style TargetType="Image">
+                            <Setter Property="WidthRequest" Value="240"/>
+                        </Style>
+
+                        <!-- 1/4 inch indent for prose -->
+                        <Thickness x:Key="ProsIndent">40,0,0,0</Thickness>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+
+
+                <!-- Text and images.... -->
+                <StackLayout Spacing="0">
+                    <Label Text="St James' Park, Newcastle" Style="{DynamicResource TitleLabel}"
+                           FontAttributes="Italic"></Label>
+
+                    <Label Style="{DynamicResource SubtitleStyle}" TextColor="Black" HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Page 1"/>
+                                <Span Text="{x:Static sys:Environment.NewLine}"/>
+                                <Span Text="A Mad House at the best of times...."/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label
+                        Text="St James' Park has been the home ground of Newcastle United since 1892 and has been used for football since 1880.
+Throughout its history, the desire for expansion has caused conflict with local residents and the local council.
+This has led to proposals to move at least twice in the late 1960s and a controversial 1995 proposed move to nearby Leazes Park. Reluctance to move has led to the distinctive lop-sided appearance of the present-day stadium's asymmetrical stands." />
+
+
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

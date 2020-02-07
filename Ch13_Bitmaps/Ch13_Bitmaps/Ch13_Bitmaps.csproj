@@ -15,12 +15,18 @@
     <None Remove="Images\DSC_0285.JPG" />
     <None Remove="Images\DSC_0285_1200x900.jpg" />
     <None Remove="Images\DSC_0285_256x256.jpg" />
+    <None Remove="Images\StJames%27Park\St-james-park-1970s.jpg" />
+    <None Remove="Images\StJames%27Park\St-james-park-2000s.jpg" />
+    <None Remove="Images\StJames%27Park\St-james-park-james-darcy.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Images\DSC_0285.JPG" />
     <EmbeddedResource Include="Images\DSC_0285_1200x900.jpg" />
     <EmbeddedResource Include="Images\DSC_0285_256x256.jpg" />
+    <EmbeddedResource Include="Images\StJames'Park\St-james-park-1970s.jpg" />
+    <EmbeddedResource Include="Images\StJames'Park\St-james-park-2000s.jpg" />
+    <EmbeddedResource Include="Images\StJames'Park\St-james-park-james-darcy.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,6 +56,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="S5_DeviceIndBitmapSize.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="S6_MadStJames%27Park.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
