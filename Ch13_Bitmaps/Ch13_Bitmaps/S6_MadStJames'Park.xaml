@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=netstandard"
+             xmlns:xamlMarkupExt="clr-namespace:Ch13_Bitmaps.XAMLMarkupExt;assembly=Ch13_Bitmaps"
              x:Class="Ch13_Bitmaps.S6_MadStJamesPark"
              BackgroundColor="LightBlue">
     <ContentPage.Padding>
@@ -53,9 +54,18 @@
                         Text="St James' Park has been the home ground of Newcastle United since 1892 and has been used for football since 1880.
 Throughout its history, the desire for expansion has caused conflict with local residents and the local council.
 This has led to proposals to move at least twice in the late 1960s and a controversial 1995 proposed move to nearby Leazes Park. Reluctance to move has led to the distinctive lop-sided appearance of the present-day stadium's asymmetrical stands." />
-
-
-
+                    <Image Source="{xamlMarkupExt:ImageResource Ch13_Bitmaps.Images.StJamesPark.St-james-park-1970s.jpg}"/>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    Text="The site of St James' Park was originally a patch of sloping grazing land, bordered by Georgian Leazes Terrace and near the historic Town Moor, owned by the Freemen of the City, both factors that later affected development of the ground, with the local council being the landlord of the site." />
+                                <Span Text="Leazes Terrace" FontAttributes="Italic"/>
+                                <Span Text="was built c1830 by notable Newcastle residents, architect Thomas Oliver and builder Richard Grainger. Once the residence of high society in Newcastle, it is now a Grade 1 listed building and recently refurbished, is currently being used as self-catering postgraduate student accommodation by Newcastle University. The site was also near the gallows of the city, last used in 1844, lending the Gallowgate End its name." />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Image Source="{xamlMarkupExt:ImageResource Ch13_Bitmaps.Images.StJamesPark.St-james-park-2000s.jpg}"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
