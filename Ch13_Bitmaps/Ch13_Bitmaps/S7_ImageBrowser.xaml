@@ -15,7 +15,7 @@
 
         <StackLayout Orientation="Horizontal">
             <Button x:Name="PrevButton" Text="Previous" IsEnabled="False" HorizontalOptions="CenterAndExpand" Clicked="OnPrevButClicked"/>
-            <Button x:Name="NextButton" Text="Next" IsEnabled="False" HorizontalOptions="CenterAndExpand" Clicked="OnNextButClicked"/>
+            <Button x:Name="NextButton" Text="Next" IsEnabled="True" HorizontalOptions="CenterAndExpand" Clicked="OnNextButClicked"/>
         </StackLayout>
     </StackLayout>
 

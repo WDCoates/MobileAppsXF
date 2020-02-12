@@ -20,17 +20,27 @@ namespace Ch13_Bitmaps
 
         private void OnImagePropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            LFileName.Text = "Ready";
         }
 
         private void OnPrevButClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            ActivityInd1.IsEnabled = false;
+            ActivityInd1.IsRunning = false;
+
+            NextButton.IsEnabled = true;
+            PrevButton.IsEnabled = false;
         }
 
         private void OnNextButClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            ActivityInd1.IsEnabled = true;
+            ActivityInd1.IsRunning = true;
+
+            PrevButton.IsEnabled = true;
+            NextButton.IsEnabled = false;
+
+
         }
     }
 }
