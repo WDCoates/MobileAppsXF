@@ -10,7 +10,7 @@
                 HorizontalOptions="CenterAndExpand" />
             
             <Image Source="{xamlMarkupExt:ImageResource Ch13_Bitmaps.Images.DSC_0285.JPG}"
-                   BackgroundColor="Aqua" SizeChanged="OnImageSizeChanged"/>
+                   BackgroundColor="Aqua" SizeChanged="OnImageSizeChanged" HorizontalOptions="Center"/>
 
             <Label x:Name="bLabel" FontSize="Medium" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
         </StackLayout>
