@@ -15,7 +15,7 @@ namespace Ch13_Bitmaps
 	{
        
         readonly WebRequest _request;
-        JsonFlickerFeed _imageList;
+        FlickerFeed _imageList;
         int _imageListIndex = 0;
 
 		public S7_ImageBrowser ()
@@ -36,8 +36,8 @@ namespace Ch13_Bitmaps
                     Stream stream = _request.EndGetResponse(result).GetResponseStream();
 
                     //Deserialize the JSON into the imageList;
-                    var jsonSerializer = new DataContractJsonSerializer(typeof(JsonFlickerFeed));
-                    _imageList = (JsonFlickerFeed) jsonSerializer.ReadObject(stream ?? throw new InvalidOperationException());
+                    var jsonSerializer = new DataContractJsonSerializer(typeof(FlickerFeed));
+                    _imageList = (FlickerFeed) jsonSerializer.ReadObject(stream ?? throw new InvalidOperationException());
 
                     if (_imageList.items.Count > 0)
                         FetchPhoto();
@@ -74,7 +74,7 @@ namespace Ch13_Bitmaps
         {
             // Prepare for new image.
             Image1.Source = null;
-            string url = _imageList.items[_imageListIndex].link;
+            string url = _imageList.items[_imageListIndex].media.m;
 
             //Set the filename
             LFileName.Text = url.Substring(url.LastIndexOf('/') + 1);
