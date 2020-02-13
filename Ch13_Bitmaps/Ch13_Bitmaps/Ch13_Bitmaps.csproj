@@ -13,12 +13,20 @@
 
   <ItemGroup>
     <None Remove="Images\DSC_0285.JPG" />
+    <None Remove="Images\DSC_0285_1200x900.jpg" />
     <None Remove="Images\DSC_0285_256x256.jpg" />
+    <None Remove="Images\StJamesPark\St-james-park-1970s.jpg" />
+    <None Remove="Images\StJamesPark\St-james-park-2000s.jpg" />
+    <None Remove="Images\StJamesPark\St-james-park-james-darcy.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Images\DSC_0285.JPG" />
+    <EmbeddedResource Include="Images\DSC_0285_1200x900.jpg" />
     <EmbeddedResource Include="Images\DSC_0285_256x256.jpg" />
+    <EmbeddedResource Include="Images\StJamesPark\St-james-park-1970s.jpg" />
+    <EmbeddedResource Include="Images\StJamesPark\St-james-park-2000s.jpg" />
+    <EmbeddedResource Include="Images\StJamesPark\St-james-park-james-darcy.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,5 +55,35 @@
     <EmbeddedResource Update="S4_UsingImgResExt.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="S5_DeviceIndBitmapSize.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="S6_MadStJames%27Park.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="S7_ImageBrowser.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S1_PlatformIndependentBitmaps.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S2_SmallBitmapImageOnly.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S3_ResourceBitmapCode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="S4_UsingImgResExt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>

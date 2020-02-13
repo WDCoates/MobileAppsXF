@@ -13,6 +13,9 @@
         <Button Text="Page for S2" x:Name="Button2"></Button>
         <Button Text="S3 - Resource Bitmap Code" x:Name="Button3" HorizontalOptions="Center"></Button>
         <Button Text="S4 - Using Image Resource Extension" x:Name="Button4" HorizontalOptions="Center"></Button>
+        <Button Text="S5 - Device Indy Bitmap Sizing" x:Name="Button5" HorizontalOptions="Center"></Button>
+        <Button Text="S6 - Mad St James' Park A Short Story" x:Name="Button6" HorizontalOptions="Center"></Button>
+        <Button Text="S7 - Image Browser" x:Name="Button7" HorizontalOptions="Center"></Button>
     </StackLayout>
 
 </ContentPage>
