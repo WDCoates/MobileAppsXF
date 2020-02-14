@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Net;
-using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+
 
 namespace Ch13_Bitmaps
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class S7_ImageBrowser : ContentPage
 	{
        
@@ -22,7 +19,7 @@ namespace Ch13_Bitmaps
 		{
 			InitializeComponent ();
 
-            Uri uri = new Uri("https://api.flickr.com/services/feeds/photos_public.gne?tags=kitten&format=json&nojsoncallback=1");
+            Uri uri = new Uri("https://api.flickr.com/services/feeds/photos_public.gne?tags=GT40&format=json&nojsoncallback=1");
             _request = WebRequest.Create(uri);
             _request.BeginGetResponse(WebRequestCallback, null);
         }
@@ -51,10 +48,14 @@ namespace Ch13_Bitmaps
 
         private void OnImagePropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == "IsLoading")
+            Device.BeginInvokeOnMainThread(() =>
             {
-                ActivityInd1.IsRunning = ((Image) sender).IsLoading;
-            }
+                if (e.PropertyName == "IsLoading")
+                {
+                    ActivityInd1.IsRunning = ((Image) sender).IsLoading;
+                }
+            });
+
         }
 
         private void OnPrevButClicked(object sender, EventArgs e)
