@@ -34,6 +34,9 @@ namespace Ch13_Bitmaps
             
             //S7_ImageBrowser()
             Button7.Clicked += (sender, args) => { Navigation.PushAsync(new S7_ImageBrowser()); };
+
+            //S8_Streaming Bitmaps
+            Button8.Clicked += (sender, args) => { Navigation.PushAsync(new S8_StreamingBitmaps()); };
         }
     }
 }
