@@ -16,7 +16,7 @@
         <Button Text="S5 - Device Indy Bitmap Sizing" x:Name="Button5" HorizontalOptions="Center"></Button>
         <Button Text="S6 - Mad St James' Park A Short Story" x:Name="Button6" HorizontalOptions="Center"></Button>
         <Button Text="S7 - Image Browser" x:Name="Button7" HorizontalOptions="Center"></Button>
-        <Button Text="s8 - Streaming Bitmaps" x:Name="Button8" HorizontalOptions="Center"></Button>
+        <Button Text="S8 - Streaming Bitmaps" x:Name="Button8" HorizontalOptions="Center"></Button>
     </StackLayout>
 
 </ContentPage>
