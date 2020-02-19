@@ -7,11 +7,5 @@
             <On Platform="Android, UWP, WPF">0,10,0,5</On>
         </OnPlatform>
     </ContentPage.Padding>
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <Image x:Name="Image" Aspect="Fill"/>
 </ContentPage>
