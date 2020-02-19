@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Text;
 using Xamarin.Forms;
 
@@ -9,7 +7,7 @@ namespace Ch13_Bitmaps
     public class BmpMaker
     {
         private const int HeaderSize = 54;
-        private readonly byte[] buffer;
+        private readonly byte[] _buffer;
         public int Height { get; private set; }
         public int Width { get; private set; }
 
@@ -21,15 +19,15 @@ namespace Ch13_Bitmaps
             var numPixels = Width * Height;
             var numPixelBytes = 4 * numPixels;
             var fileSize = HeaderSize + numPixelBytes;
-            buffer = new byte[fileSize];
+            _buffer = new byte[fileSize];
 
             //Write headers in MemoryStream i.e. buffer.
-            using (MemoryStream memStream = new MemoryStream(buffer))
+            using (MemoryStream memStream = new MemoryStream(_buffer))
             {
                 using (BinaryWriter bWriter = new BinaryWriter(memStream, Encoding.UTF8))
                 {
                     //Construct BMP header (14 bytes).
-                    bWriter.Write(new char[] {'B', 'M'});   //Signature
+                    bWriter.Write(new[] {'B', 'M'});   //Signature
                     bWriter.Write(fileSize);
                     bWriter.Write((short)0);                    // Reserved
                     bWriter.Write((short)0);                    // Reserved
@@ -63,17 +61,17 @@ namespace Ch13_Bitmaps
         public void SetPixel(int row, int col, int r, int g, int b, int a)
         {
             var index = (row * Width + col) * 4 + HeaderSize;
-            buffer[index + 0] = (byte)b;
-            buffer[index + 1] = (byte)g;
-            buffer[index + 2] = (byte)r;
-            buffer[index + 3] = (byte)a;
+            _buffer[index + 0] = (byte)b;
+            _buffer[index + 1] = (byte)g;
+            _buffer[index + 2] = (byte)r;
+            _buffer[index + 3] = (byte)a;
 
         }
 
         public ImageSource Generate()
         {
             // Create MemoryStream from buffer with bitmap.
-            var memoryStream = new MemoryStream(buffer);
+            var memoryStream = new MemoryStream(_buffer);
 
             // Convert to StreamImageSource
             return ImageSource.FromStream(() => memoryStream);
