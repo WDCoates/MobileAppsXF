@@ -18,6 +18,7 @@
         <Button Text="S7 - Image Browser" x:Name="Button7" HorizontalOptions="Center"></Button>
         <Button Text="S8 - Streaming Bitmaps" x:Name="Button8" HorizontalOptions="Center"></Button>
         <Button Text="S9 - Bitmap Maker" x:Name="Button9" HorizontalOptions="Center"></Button>
+        <Button Text="SA - Platform Bitmaps Page" x:Name="ButtonA" HorizontalOptions="Center"></Button>
     </StackLayout>
 
 </ContentPage>

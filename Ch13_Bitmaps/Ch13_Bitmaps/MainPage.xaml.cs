@@ -40,6 +40,9 @@ namespace Ch13_Bitmaps
 
             //S9_BitmapMaker ()
             Button9.Clicked += (sender, args) => { Navigation.PushAsync(new S9_BitmapMaker()); };
+
+            //SA_PlatformBitmapsPage()
+            ButtonA.Clicked += (sender, args) => { Navigation.PushAsync(new SA_PlatformBitmapsPage()); };
         }
     }
 }
