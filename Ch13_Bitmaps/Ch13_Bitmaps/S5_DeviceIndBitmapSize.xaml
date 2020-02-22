@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xamlMarkupExt="clr-namespace:Ch13_Bitmaps.XAMLMarkupExt;assembly=Ch13_Bitmaps"
+             x:Class="Ch13_Bitmaps.S5_DeviceIndBitmapSize">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Device Independent Bitmap Size!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Label Text="1200 x 900 Pixel Bitmap" FontSize="Medium" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+            <!--1.5 inch image width -->
+            <Image Source="{xamlMarkupExt:ImageResource Ch13_Bitmaps.Images.DSC_0285_1200x900.jpg}" WidthRequest="240" HorizontalOptions="Center"
+                   SizeChanged="Image_SizeChanged"/>
+
+            <Label x:Name="label" FontSize="Medium" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

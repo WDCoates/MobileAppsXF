@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch13_Bitmaps.S9_BitmapMaker">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android, UWP, WPF">0,10,0,5</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <Image x:Name="Image" Aspect="Fill"/>
+</ContentPage>

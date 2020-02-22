@@ -15,7 +15,7 @@ namespace Ch13_Bitmaps
         private void OnImageSizeChanged(object sender, EventArgs e)
         {
             var image = (Image)sender;
-            bLabel.Text = $"Render size = {image.Width:F0} x {image.Height:F0}";
+            BLabel.Text = $"Render size = {image.Width:F0} x {image.Height:F0}";
         }
     }
 }
