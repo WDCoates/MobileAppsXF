@@ -3,22 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Ch13_Bitmaps"
              x:Class="Ch13_Bitmaps.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-        <Button Text="Page for S1" x:Name="Button1"></Button>
-        <Button Text="Page for S2" x:Name="Button2"></Button>
-        <Button Text="S3 - Resource Bitmap Code" x:Name="Button3" HorizontalOptions="Center"></Button>
-        <Button Text="S4 - Using Image Resource Extension" x:Name="Button4" HorizontalOptions="Center"></Button>
-        <Button Text="S5 - Device Indy Bitmap Sizing" x:Name="Button5" HorizontalOptions="Center"></Button>
-        <Button Text="S6 - Mad St James' Park A Short Story" x:Name="Button6" HorizontalOptions="Center"></Button>
-        <Button Text="S7 - Image Browser" x:Name="Button7" HorizontalOptions="Center"></Button>
-        <Button Text="S8 - Streaming Bitmaps" x:Name="Button8" HorizontalOptions="Center"></Button>
-        <Button Text="S9 - Bitmap Maker" x:Name="Button9" HorizontalOptions="Center"></Button>
-        <Button Text="SA - Platform Bitmaps Page" x:Name="ButtonA" HorizontalOptions="Center"></Button>
-    </StackLayout>
-
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <!-- Place new controls here -->
+                <Label Text="Welcome to Xamarin.Forms!" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+                <Button Text="Page for S1" x:Name="Button1"></Button>
+                <Button Text="Page for S2" x:Name="Button2"></Button>
+                <Button Text="S3 - Resource Bitmap Code" x:Name="Button3" HorizontalOptions="Center"></Button>
+                <Button Text="S4 - Using Image Resource Extension" x:Name="Button4" HorizontalOptions="Center"></Button>
+                <Button Text="S5 - Device Indy Bitmap Sizing" x:Name="Button5" HorizontalOptions="Center"></Button>
+                <Button Text="S6 - Mad St James' Park A Short Story" x:Name="Button6" HorizontalOptions="Center"></Button>
+                <Button Text="S7 - Image Browser" x:Name="Button7" HorizontalOptions="Center"></Button>
+                <Button Text="S8 - Streaming Bitmaps" x:Name="Button8" HorizontalOptions="Center"></Button>
+                <Button Text="S9 - Bitmap Maker" x:Name="Button9" HorizontalOptions="Center"></Button>
+                <Button Text="SA - Platform Bitmaps Page" x:Name="ButtonA" HorizontalOptions="Center"></Button>
+                <Button Text="SB - Device Ind Bitmaps Two Page" x:Name="ButtonB" HorizontalOptions="Center"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

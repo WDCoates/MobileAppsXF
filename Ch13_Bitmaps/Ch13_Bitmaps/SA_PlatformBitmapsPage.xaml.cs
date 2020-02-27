@@ -46,7 +46,7 @@ namespace Ch13_Bitmaps
                     case Device.Android:
                         return "icon.png";
                     case Device.UWP:
-                        return "Assets/LargeTile.scale-100.png";
+                        return "Assets/LargeTile.png";
                 }
 
             return null;
