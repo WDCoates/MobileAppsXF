@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace Ch13_Bitmaps
 {
@@ -46,6 +47,8 @@ namespace Ch13_Bitmaps
 
             //SB_DeviceIndBitMapsTwo ()
             ButtonB.Clicked += (sender, args) => { Navigation.PushAsync(new SB_DeviceIndBitMapsTwo()); };
-        }
+
+            
+    }
     }
 }

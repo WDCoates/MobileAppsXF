@@ -11,7 +11,9 @@ namespace Ch13_Bitmaps
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new SC_ToolbarDemo());
+
         }
 
         protected override void OnStart()
