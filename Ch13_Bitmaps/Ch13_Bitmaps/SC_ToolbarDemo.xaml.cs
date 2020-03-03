@@ -20,5 +20,11 @@ namespace Ch13_Bitmaps
 
             //this.Title = "Dave's Toolbar Demo!";
         }
-	}
+
+        private void OnToolbarItemClicked(object sender, EventArgs e)
+        {
+            ToolbarItem tItem = (ToolbarItem)sender;
+            Label1.Text = "ToolbarItem '" + tItem.Text + "' clicked!";
+        }
+    }
 }
