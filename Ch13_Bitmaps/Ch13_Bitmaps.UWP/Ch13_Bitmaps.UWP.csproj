@@ -132,6 +132,9 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Images\ic_apps_black_18dp.png" />
     <Content Include="Images\ic_add_black_18dp.png" />
+    <Content Include="Images\ic_thumb_down_black_18dp.png" />
+    <Content Include="Images\ic_thumb_up_black_18dp.png" />
+    <Content Include="Images\ic_thumb_up_white_18dp.png" />
     <Content Include="Images\Scream.scale-100.jpg" />
     <Content Include="Images\Scream.scale-200.jpg" />
     <Content Include="Images\Venus.scale-100.jpg" />
