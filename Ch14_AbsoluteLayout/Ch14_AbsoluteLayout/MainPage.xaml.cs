@@ -9,6 +9,8 @@ namespace Ch14_AbsoluteLayout
             InitializeComponent();
             //S3_ResourceBitmapCode ()
             ButtonS1.Clicked += (sender, args) => { Navigation.PushAsync(new S1_AbsoluteDemo()); };
+
+            ButtonS2.Clicked += (sender, args) => { Navigation.PushAsync(new S2_Chessboard()); };
         }
     }
 }

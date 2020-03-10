@@ -10,7 +10,8 @@
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
 
-        <Button Text="S1_AbsoluteLayout" x:Name="ButtonS1"></Button>
+        <Button Text="AbsoluteLayout Demo" x:Name="ButtonS1" HorizontalOptions="Center"></Button>
+        <Button Text="Chessboard Fixed Page" x:Name="ButtonS2" HorizontalOptions="Center"></Button>
 
     </StackLayout>
 
