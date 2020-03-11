@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch14_AbsoluteLayout.S3_ChessboardDynamic">
+    <ContentPage.Content>
+        <ContentView x:Name="ConView1">
+            <AbsoluteLayout BackgroundColor="Beige" HorizontalOptions="Center" VerticalOptions="Center" x:Name="ALayout">
+
+            </AbsoluteLayout>
+        </ContentView>
+    </ContentPage.Content>
+</ContentPage>

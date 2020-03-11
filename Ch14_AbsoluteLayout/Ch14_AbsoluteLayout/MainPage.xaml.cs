@@ -11,6 +11,8 @@ namespace Ch14_AbsoluteLayout
             ButtonS1.Clicked += (sender, args) => { Navigation.PushAsync(new S1_AbsoluteDemo()); };
 
             ButtonS2.Clicked += (sender, args) => { Navigation.PushAsync(new S2_Chessboard()); };
+
+            ButtonS3.Clicked += (sender, args) => { Navigation.PushAsync(new S3_ChessboardDynamic()); };
         }
     }
 }
