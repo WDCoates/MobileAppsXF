@@ -10,6 +10,17 @@ namespace Ch13_Bitmaps
         {
             InitializeComponent();
 
+            var dec = 0.0123456789m;
+            var test = $" https://docs.microsoft.com/en-us/dotnet/standard/base-types/formatting-types Dec => {dec:G4};";
+
+            Label labelDec = new Label
+            {
+                Text = test,
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.CenterAndExpand
+            };
+
             Image image = new Image
             {
                 Source = new FileImageSource
@@ -33,6 +44,7 @@ namespace Ch13_Bitmaps
             {
                 Children =
                 {
+                    labelDec,
                     image,
                     label
                 }
@@ -46,7 +58,7 @@ namespace Ch13_Bitmaps
                     case Device.Android:
                         return "icon.png";
                     case Device.UWP:
-                        return "Assets/LargeTile.scale-100.png";
+                        return "Assets/LargeTile.png";
                 }
 
             return null;

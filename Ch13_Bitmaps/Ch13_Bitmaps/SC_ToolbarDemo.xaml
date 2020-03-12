@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch13_Bitmaps.SC_ToolbarDemo">
+    <ContentPage.Title>
+        Toolbar 1
+    </ContentPage.Title>
+
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Apps" Order="Primary" Clicked="OnToolbarItemClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="ic_apps_black_18dp.png"/>
+                    <On Platform="UWP" Value="Images/ic_apps_black_18dp.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem Text="Discover" Order="Secondary" Clicked="OnToolbarItemClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="ic_add_black_18dp.png"/>
+                    <On Platform="UWP" Value="Images/ic_add_black_18dp.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+
+    <StackLayout VerticalOptions="Center" Spacing="50">
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button">
+                    <Setter Property="HorizontalOptions" Value="Center"/>
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+
+        <Label x:Name="Label1" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        <Button Text="Love black">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="ic_thumb_up_black_18dp.png" />
+                    <On Platform="UWP" Value="Images/ic_thumb_up_black_18dp.png" />
+                </OnPlatform>
+            </Button.Image>
+        </Button>
+
+       
+        <Button Text="Love white">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="ic_thumb_up_white_18dp.png" />
+                    <On Platform="UWP" Value="Images/ic_thumb_up_white_18dp.png" />
+                </OnPlatform>
+            </Button.Image>
+        </Button>
+
+        <Button Text="Hate black">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="ic_thumb_down_black_18dp.png" />
+                    <On Platform="UWP" Value="Images/ic_thumb_down_black_18dp.png" />
+                </OnPlatform>
+            </Button.Image>
+        </Button>
+
+    </StackLayout>
+</ContentPage>
