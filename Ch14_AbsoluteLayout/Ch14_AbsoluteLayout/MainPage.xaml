@@ -13,6 +13,7 @@
         <Button Text="AbsoluteLayout Demo" x:Name="ButtonS1" HorizontalOptions="Center" />
         <Button Text="Chessboard Fixed Page" x:Name="ButtonS2" HorizontalOptions="Center" />
         <Button Text="Dynamic Chessboard" x:Name="ButtonS3" HorizontalOptions="Center"/>
+        <Button Text="Proportional Chessboard" x:Name="ButtonS4" HorizontalOptions="Center"/>
 
     </StackLayout>
 
